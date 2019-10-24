@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/AnimateRotation.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/AnimateRotation.h

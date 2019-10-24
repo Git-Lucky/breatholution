@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/MaplyUpdateLayer.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/MaplyUpdateLayer.h

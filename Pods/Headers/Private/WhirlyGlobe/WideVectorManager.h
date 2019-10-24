@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/WideVectorManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/WideVectorManager.h

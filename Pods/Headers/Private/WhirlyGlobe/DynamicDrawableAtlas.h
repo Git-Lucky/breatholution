@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/DynamicDrawableAtlas.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/DynamicDrawableAtlas.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/MaplyBlankTileSource.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/MaplyBlankTileSource.h

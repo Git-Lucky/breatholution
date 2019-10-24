@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/MaplyGDALRetileSource.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/MaplyGDALRetileSource.h

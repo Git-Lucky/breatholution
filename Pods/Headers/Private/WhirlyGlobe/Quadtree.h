@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/Quadtree.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/Quadtree.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/LabelManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/LabelManager.h

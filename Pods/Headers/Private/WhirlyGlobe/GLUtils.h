@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/GLUtils.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/GLUtils.h

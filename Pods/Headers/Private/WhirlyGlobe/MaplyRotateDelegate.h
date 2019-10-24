@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MaplyRotateDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MaplyRotateDelegate.h

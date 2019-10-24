@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/MaplyTexture.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/MaplyTexture.h

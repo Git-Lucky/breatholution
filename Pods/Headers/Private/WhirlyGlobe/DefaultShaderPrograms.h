@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/DefaultShaderPrograms.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/DefaultShaderPrograms.h

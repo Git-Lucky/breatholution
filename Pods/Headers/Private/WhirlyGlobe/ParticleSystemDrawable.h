@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ParticleSystemDrawable.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ParticleSystemDrawable.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MaplyAnimateTranslateMomentum.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MaplyAnimateTranslateMomentum.h

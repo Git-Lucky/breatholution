@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/TextureAtlas.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/TextureAtlas.h

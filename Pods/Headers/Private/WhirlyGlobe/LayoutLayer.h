@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/LayoutLayer.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/LayoutLayer.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/NSData+Zlib.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/NSData+Zlib.h

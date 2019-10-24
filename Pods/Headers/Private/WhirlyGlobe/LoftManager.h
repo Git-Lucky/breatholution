@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/LoftManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/LoftManager.h

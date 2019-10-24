@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/Scene.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/Scene.h

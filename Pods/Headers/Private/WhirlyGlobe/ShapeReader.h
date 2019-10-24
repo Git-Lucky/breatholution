@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ShapeReader.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ShapeReader.h

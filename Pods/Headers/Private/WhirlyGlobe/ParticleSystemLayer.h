@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ParticleSystemLayer.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ParticleSystemLayer.h

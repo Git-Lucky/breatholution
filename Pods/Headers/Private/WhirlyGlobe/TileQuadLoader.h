@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/TileQuadLoader.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/TileQuadLoader.h

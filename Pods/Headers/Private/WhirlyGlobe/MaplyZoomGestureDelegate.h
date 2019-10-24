@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MaplyZoomGestureDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MaplyZoomGestureDelegate.h

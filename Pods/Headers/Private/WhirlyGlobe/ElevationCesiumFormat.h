@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ElevationCesiumFormat.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ElevationCesiumFormat.h

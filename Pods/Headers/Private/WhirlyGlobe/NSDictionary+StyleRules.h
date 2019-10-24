@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/NSDictionary+StyleRules.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/NSDictionary+StyleRules.h

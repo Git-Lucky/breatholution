@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/NSString+Stuff.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/NSString+Stuff.h

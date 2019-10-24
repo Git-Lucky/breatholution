@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/UIColor+Stuff.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/UIColor+Stuff.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/BillboardManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/BillboardManager.h

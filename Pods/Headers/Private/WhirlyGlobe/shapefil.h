@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/local_libs/shapefile/shapefil.h
+../../../WhirlyGlobe/common/local_libs/shapefile/shapefil.h

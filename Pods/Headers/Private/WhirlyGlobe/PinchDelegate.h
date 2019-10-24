@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/PinchDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/PinchDelegate.h

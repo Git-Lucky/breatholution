@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/WGCoordinate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/WGCoordinate.h

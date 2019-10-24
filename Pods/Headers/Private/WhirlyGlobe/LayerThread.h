@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/LayerThread.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/LayerThread.h

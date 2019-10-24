@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/GlobeAnimateHeight.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/GlobeAnimateHeight.h

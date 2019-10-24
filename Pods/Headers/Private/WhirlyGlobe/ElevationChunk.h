@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ElevationChunk.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ElevationChunk.h

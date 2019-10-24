@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/EAGLView.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/EAGLView.h

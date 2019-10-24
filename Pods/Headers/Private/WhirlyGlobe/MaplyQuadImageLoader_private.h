@@ -1,0 +1,1 @@
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/private/MaplyQuadImageLoader_private.h

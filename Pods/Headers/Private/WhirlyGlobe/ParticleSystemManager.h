@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ParticleSystemManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ParticleSystemManager.h

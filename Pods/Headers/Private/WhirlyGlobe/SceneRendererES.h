@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/SceneRendererES.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/SceneRendererES.h

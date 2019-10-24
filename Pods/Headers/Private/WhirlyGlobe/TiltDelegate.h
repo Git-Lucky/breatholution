@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/private/TiltDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/private/TiltDelegate.h

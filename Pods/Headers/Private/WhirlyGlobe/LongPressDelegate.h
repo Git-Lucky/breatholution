@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/LongPressDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/LongPressDelegate.h

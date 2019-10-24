@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/SphericalEarthChunkManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/SphericalEarthChunkManager.h

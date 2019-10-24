@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/SceneGraphManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/SceneGraphManager.h

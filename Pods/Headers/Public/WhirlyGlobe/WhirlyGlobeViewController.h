@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/WhirlyGlobeViewController.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/WhirlyGlobeViewController.h

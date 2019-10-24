@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/BasicDrawableInstance.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/BasicDrawableInstance.h

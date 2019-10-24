@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/GeometryManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/GeometryManager.h

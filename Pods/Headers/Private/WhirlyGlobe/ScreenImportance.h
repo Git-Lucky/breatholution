@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ScreenImportance.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ScreenImportance.h

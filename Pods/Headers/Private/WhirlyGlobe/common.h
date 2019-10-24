@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/local_libs/octencoding/common.h
+../../../WhirlyGlobe/common/local_libs/protobuf/src/google/protobuf/stubs/common.h

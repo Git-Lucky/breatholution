@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/TapDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/TapDelegate.h

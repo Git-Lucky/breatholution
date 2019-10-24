@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/TileQuadOfflineRenderer.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/TileQuadOfflineRenderer.h

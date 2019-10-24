@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/BufferBuilder.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/BufferBuilder.h

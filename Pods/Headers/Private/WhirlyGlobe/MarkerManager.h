@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MarkerManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MarkerManager.h

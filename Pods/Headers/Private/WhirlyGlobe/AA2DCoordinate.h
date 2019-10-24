@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/local_libs/aaplus/AA2DCoordinate.h
+../../../WhirlyGlobe/common/local_libs/aaplus/AA2DCoordinate.h

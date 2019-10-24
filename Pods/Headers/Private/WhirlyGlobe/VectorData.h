@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/VectorData.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/VectorData.h

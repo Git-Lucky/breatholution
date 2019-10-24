@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MBTileQuadSource.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MBTileQuadSource.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ElevationCesiumChunk.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ElevationCesiumChunk.h

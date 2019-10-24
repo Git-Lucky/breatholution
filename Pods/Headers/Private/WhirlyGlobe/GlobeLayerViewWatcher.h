@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/GlobeLayerViewWatcher.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/GlobeLayerViewWatcher.h

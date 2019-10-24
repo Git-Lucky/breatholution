@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/Lighting.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/Lighting.h

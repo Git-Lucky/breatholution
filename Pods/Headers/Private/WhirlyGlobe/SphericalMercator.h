@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/SphericalMercator.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/SphericalMercator.h

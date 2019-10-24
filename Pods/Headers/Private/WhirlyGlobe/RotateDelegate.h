@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/RotateDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/RotateDelegate.h

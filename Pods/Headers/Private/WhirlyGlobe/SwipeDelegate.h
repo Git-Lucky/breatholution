@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/SwipeDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/SwipeDelegate.h

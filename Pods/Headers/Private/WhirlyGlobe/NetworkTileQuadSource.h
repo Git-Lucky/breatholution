@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/NetworkTileQuadSource.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/NetworkTileQuadSource.h

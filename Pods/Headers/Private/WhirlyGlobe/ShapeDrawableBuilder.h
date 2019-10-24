@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ShapeDrawableBuilder.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ShapeDrawableBuilder.h

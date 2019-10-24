@@ -1,0 +1,1 @@
+../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/Maply3DTouchPreviewDatasource.h

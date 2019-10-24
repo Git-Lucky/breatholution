@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/Generator.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/Generator.h

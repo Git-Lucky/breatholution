@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/BaseInfo.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/BaseInfo.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/local_libs/aaplus/AAFK5.h
+../../../WhirlyGlobe/common/local_libs/aaplus/AAFK5.h

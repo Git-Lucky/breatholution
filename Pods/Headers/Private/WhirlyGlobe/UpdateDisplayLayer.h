@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/UpdateDisplayLayer.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/UpdateDisplayLayer.h

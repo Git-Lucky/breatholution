@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MaplyPinchDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MaplyPinchDelegate.h

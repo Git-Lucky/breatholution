@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/Texture.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/Texture.h

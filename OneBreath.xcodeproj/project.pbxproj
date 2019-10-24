@@ -117,6 +117,7 @@
 				D0BA7229235CDC310049913D /* Info.plist */,
 				D0BA7236235CF4B00049913D /* Extensions.swift */,
 				D05A92952361376800EB0186 /* OneBreath-Bridging-Header.h */,
+				D0F22A2F23614632004FA68E /* Resources */,
 			);
 			path = OneBreath;
 			sourceTree = "<group>";
@@ -139,6 +140,13 @@
 				D0BA723A235D19800049913D /* DisplayLink.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D0F22A2F23614632004FA68E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

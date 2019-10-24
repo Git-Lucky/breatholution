@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/Tesselator.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/Tesselator.h

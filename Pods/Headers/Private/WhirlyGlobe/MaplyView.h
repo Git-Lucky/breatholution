@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MaplyView.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MaplyView.h

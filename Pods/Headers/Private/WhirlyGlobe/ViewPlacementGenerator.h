@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ViewPlacementGenerator.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ViewPlacementGenerator.h

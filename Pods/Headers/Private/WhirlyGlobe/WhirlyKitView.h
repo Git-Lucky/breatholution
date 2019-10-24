@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/WhirlyKitView.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/WhirlyKitView.h

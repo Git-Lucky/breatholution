@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/local_libs/glues/source/glues.h
+../../../WhirlyGlobe/common/local_libs/glues/source/glues.h

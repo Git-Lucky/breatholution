@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MaplyTwoFingerTapDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MaplyTwoFingerTapDelegate.h

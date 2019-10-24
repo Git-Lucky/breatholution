@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/GeometryOBJReader.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/GeometryOBJReader.h

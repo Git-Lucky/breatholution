@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/local_libs/glues/source/libtess/priorityq.h
+../../../WhirlyGlobe/common/local_libs/glues/source/libtess/priorityq.h

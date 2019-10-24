@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MaplyTouchCancelAnimationDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MaplyTouchCancelAnimationDelegate.h

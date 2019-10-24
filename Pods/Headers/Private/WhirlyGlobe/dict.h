@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/local_libs/glues/source/libtess/dict.h
+../../../WhirlyGlobe/common/local_libs/glues/source/libtess/dict.h

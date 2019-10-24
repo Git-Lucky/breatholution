@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/FlatMath.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/FlatMath.h

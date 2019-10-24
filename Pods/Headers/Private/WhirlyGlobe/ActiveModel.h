@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ActiveModel.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ActiveModel.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/MaplyAnimateFlat.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MaplyAnimateFlat.h

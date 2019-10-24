@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/GlobeDoubleTapDelegate.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/GlobeDoubleTapDelegate.h

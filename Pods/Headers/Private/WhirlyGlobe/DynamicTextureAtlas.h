@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/DynamicTextureAtlas.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/DynamicTextureAtlas.h

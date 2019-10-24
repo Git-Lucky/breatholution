@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/OpenGLES2Program.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/OpenGLES2Program.h

@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/local_libs/KissXML/Private/DDXMLPrivate.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/local_libs/glues/source/libtess/normal.h
+../../../WhirlyGlobe/common/local_libs/glues/source/libtess/normal.h

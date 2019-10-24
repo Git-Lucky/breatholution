@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/GridClipper.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/GridClipper.h

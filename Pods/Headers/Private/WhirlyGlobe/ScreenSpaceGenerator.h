@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/ScreenSpaceGenerator.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/ScreenSpaceGenerator.h

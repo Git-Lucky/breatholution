@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/VectorManager.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/VectorManager.h

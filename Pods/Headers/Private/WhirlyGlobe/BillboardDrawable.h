@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/BillboardDrawable.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/BillboardDrawable.h

@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/UIImage+Stuff.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/UIImage+Stuff.h

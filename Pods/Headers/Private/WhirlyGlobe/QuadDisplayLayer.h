@@ -1,1 +1,1 @@
-../../../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobeLib/include/QuadDisplayLayer.h
+../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/QuadDisplayLayer.h
