@@ -1,0 +1,10 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/SMCalloutView" "${PODS_ROOT}/Headers/Public/WhirlyGlobe" "${PODS_ROOT}/Headers/Public/clipper" "${PODS_ROOT}/Headers/Public/libjson" "${PODS_ROOT}/Headers/Public/proj4" "${PODS_ROOT}/Headers/Public/tinyxml" "${PODS_ROOT}/boost" "${PODS_ROOT}/eigen" "${PODS_ROOT}/clipper" "$(SDKROOT)/usr/include/libxml2" "${PODS_ROOT}/boost" "${PODS_ROOT}/clipper/" $(PODS_ROOT)/eigen
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/FMDB" "${PODS_CONFIGURATION_BUILD_DIR}/SMCalloutView" "${PODS_CONFIGURATION_BUILD_DIR}/WhirlyGlobe" "${PODS_CONFIGURATION_BUILD_DIR}/clipper" "${PODS_CONFIGURATION_BUILD_DIR}/libjson" "${PODS_CONFIGURATION_BUILD_DIR}/proj4" "${PODS_CONFIGURATION_BUILD_DIR}/tinyxml"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/FMDB" -isystem "${PODS_ROOT}/Headers/Public/SMCalloutView" -isystem "${PODS_ROOT}/Headers/Public/WhirlyGlobe" -isystem "${PODS_ROOT}/Headers/Public/clipper" -isystem "${PODS_ROOT}/Headers/Public/libjson" -isystem "${PODS_ROOT}/Headers/Public/proj4" -isystem "${PODS_ROOT}/Headers/Public/tinyxml"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"FMDB" -l"SMCalloutView" -l"WhirlyGlobe" -l"c++" -l"clipper" -l"libjson" -l"proj4" -l"sqlite3" -l"tinyxml" -l"xml2" -l"z" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "MobileCoreServices" -framework "OpenGLES" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES
