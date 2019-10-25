@@ -56,7 +56,20 @@
                     <view key="view" contentMode="scaleToFill" id="DRr-im-Blf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-jD-ojB">
+                                <rect key="frame" x="294" y="783" width="46" height="30"/>
+                                <state key="normal" title="Breath"/>
+                                <connections>
+                                    <action selector="beginBreathing:" destination="Ed3-TO-MMh" eventType="touchUpInside" id="oGj-gU-9Og"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6gH-dv-HiA" firstAttribute="trailing" secondItem="TlF-jD-ojB" secondAttribute="trailing" constant="74" id="54H-rN-NKt"/>
+                            <constraint firstItem="6gH-dv-HiA" firstAttribute="bottom" secondItem="TlF-jD-ojB" secondAttribute="bottom" constant="49" id="pfd-DX-P1U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6gH-dv-HiA"/>
                     </view>
                 </viewController>

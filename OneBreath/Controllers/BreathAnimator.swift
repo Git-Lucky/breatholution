@@ -5,6 +5,7 @@ class BreathAnimator {
     private let displayLink: DisplayLink
     private var breathingView: UIView?
     private var startTime = CACurrentMediaTime()
+    private let fileManager = FileManager()
     
     private let breathSessionTime = 60.0 //seconds
     
@@ -64,5 +65,9 @@ extension BreathAnimator: DisplayLinkDelegate {
         }
         let updatedScale = calculateScaleMultiplierForTime(elapsedTime)
         breathingView?.transform = CGAffineTransform(scaleX: updatedScale, y: updatedScale)
+        
+//        let cacheDir = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
+//        let thisCacheDir = "\(cacheDir)/stamentiles/"
+//        print(fileManager.contents(atPath: thisCacheDir))
     }
 }
