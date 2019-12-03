@@ -386,3 +386,4 @@ ${PODS_ROOT}/WhirlyGlobeResources/mapzen vectors
 ${PODS_ROOT}/WhirlyGlobeResources/vectors
 ${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m
 ${PODS_ROOT}/WhirlyGlobeResources/vectors/sf_roads
+${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle

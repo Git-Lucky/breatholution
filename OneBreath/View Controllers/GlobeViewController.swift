@@ -1,40 +1,33 @@
 import UIKit
 
 class GlobeViewController: WhirlyGlobeViewController {
-    
-    var animator: AnimatorOrchestrator?
+        
+    let useSatellite = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        clearColor = .white
+        clearColor = .clear
         
         setUpWithGlobe(self)
         
-        setPosition(MaplyCoordinate(x: 0, y: 0), height: 4)
+        setPosition(MaplyCoordinate(x: 0, y: 0), height: 1)
         
-        panGesture = false
+//        panGesture = false
 //        pinchGesture = false
-        zoomAroundPinch = false
+//        zoomAroundPinch = false
 //        rotateGesture = false
-        doubleTapZoomGesture = false
-        twoFingerTapGesture = false
-        doubleTapDragGesture = false
+//        doubleTapZoomGesture = false
+//        twoFingerTapGesture = false
+//        doubleTapDragGesture = false
         roll = 5
         
-        setAutoRotateInterval(0.01, degrees: 11)
+        setAutoRotateInterval(0.01, degrees: 4)
 
-        animator = AnimatorOrchestrator()
-        animator?.beginBreathingAnimationSequence(view: view)
     }
-    
-//    func begin
     
     var imageLoader : MaplyQuadImageLoader? = nil
     
-    @IBAction func beginBreathing(_ sender: Any) {
-        
-    }
     // Put together a quad sampler layer
     func setupLoader(_ baseVC: MaplyBaseViewController) -> MaplyQuadImageLoader? {
         // Stamen tile source
@@ -62,8 +55,24 @@ class GlobeViewController: WhirlyGlobeViewController {
         return imageLoader
     }
     
+    func setupSatalliteTiles(_ vc: WhirlyGlobeViewController) {
+        if let tileSource = MaplyMBTileSource(mbTiles: "satellite"), let layer = MaplyQuadImageTilesLayer(tileSource: tileSource) {
+            layer.coverPoles = true
+            layer.handleEdges = true
+            layer.singleLevelLoading = true
+//            layer.waitLoad = false
+            layer.borderTexel = 100
+            layer.drawPriority = 100
+            vc.add(layer)
+        }
+    }
+    
     func setUpWithGlobe(_ globeVC: WhirlyGlobeViewController) {
-        imageLoader = setupLoader(globeVC)
+        if (useSatellite) {
+            setupSatalliteTiles(globeVC)
+        } else {
+            imageLoader = setupLoader(globeVC)
+        }
     }
 }
 
