@@ -6,18 +6,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var postBreathingView: PostBreathingView!
     @IBOutlet weak var breathingInLabel: UILabel!
     @IBOutlet weak var countdownView: UIView!
-    @IBOutlet weak var breathVisualizationView: BreathVisualizationView!
+    @IBOutlet weak var breathVisualizationBoundingView: BreathVisualizationView! //for layout purposes
     @IBOutlet weak var instructionsLabel: UILabel!
     var animator: AnimatorOrchestrator?
     private let globeViewController = GlobeViewController()
+    private var breathView = UIView()
     private var breathVisualizationViewInitialFrame: CGRect?
     
     var countdownLabel: CountdownLabel?
     
+    
     //remove after poc
     @IBOutlet weak var beginBreathingButton: UIButton!
-    @IBOutlet weak var resetButton: NSLayoutConstraint!
-    
     //////////////
     let hapticGenerator = HapticGenerator()
     @IBAction func doHaptic(_ sender: Any) {
@@ -30,10 +30,7 @@ class ViewController: UIViewController {
         
         animator = AnimatorOrchestrator(delegate: self)
         
-        breathVisualizationView.addSubview(globeViewController.view)
-        globeViewController.view.frame = breathVisualizationView.bounds
-        addChild(globeViewController)
-        globeViewController.didMove(toParent: self)
+        view.addSubview(breathView)
                 
         countdownLabel = CountdownLabel(frame: countdownView.bounds)
         countdownLabel?.font = .systemFont(ofSize: 23.0)
@@ -41,14 +38,23 @@ class ViewController: UIViewController {
         
         self.breathingInLabel.alpha = 0
         self.countdownView.alpha = 0
-        self.breathVisualizationView.alpha = 0
+        self.breathVisualizationBoundingView.alpha = 0
+        self.postBreathingView.alpha = 0
+        self.instructionsLabel.alpha = 0
         self.countdownView.backgroundColor = .clear
+        self.breathView.alpha = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        breathVisualizationViewInitialFrame = breathVisualizationView.frame
+        breathVisualizationViewInitialFrame = breathVisualizationBoundingView.frame
+        breathView.frame = breathVisualizationBoundingView.frame
+        
+        breathView.addSubview(globeViewController.view)
+        globeViewController.view.frame = breathView.bounds
+        addChild(globeViewController)
+        globeViewController.didMove(toParent: self)
         
         setupBaseViewState()
     }
@@ -61,11 +67,11 @@ class ViewController: UIViewController {
         self.countdownView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         
         UIView.animate(withDuration: 2.0, animations: {
-            self.breathVisualizationView.frame = self.breathVisualizationViewInitialFrame!
-        }) { (_) in
+            self.breathView.transform = .identity
+            self.breathView.frame = self.breathVisualizationViewInitialFrame!
             self.instructionsLabel.alpha = 0
             self.postBreathingView.alpha = 0
-        }
+        })
         
         UIView.animate(withDuration: 0.5) {
             self.breathingInLabel.transform = .identity
@@ -75,8 +81,8 @@ class ViewController: UIViewController {
             self.countdownView.transform = .identity
             self.countdownView.alpha = 1
         })
-        UIView.animate(withDuration: 0.5, delay: 1.5, animations: {
-            self.breathVisualizationView.alpha = 1
+        UIView.animate(withDuration: 1, delay: 0.75, animations: {
+            self.breathView.alpha = 1
         })
         
         
@@ -84,21 +90,18 @@ class ViewController: UIViewController {
         let date = NSDate(timeIntervalSinceNow: 11111)
         countdownLabel?.setCountDownDate(targetDate: date)
         countdownLabel?.start()
-        animator?.beginBreathingSequence(breathView: breathVisualizationView, onDate: date as Date, instructionsLabel: instructionsLabel)
+        animator?.beginBreathingSequence(breathView: breathView, onDate: date as Date, instructionsLabel: instructionsLabel)
     }
     
     @IBAction func beginBreathingButton(_ sender: UIButton) {
         let date = NSDate(timeIntervalSinceNow: 4)
         countdownLabel?.setCountDownDate(targetDate: date)
         countdownLabel?.start()
-        animator?.beginBreathingSequence(breathView: breathVisualizationView, onDate: date as Date, instructionsLabel: instructionsLabel)
+        animator?.beginBreathingSequence(breathView: breathView, onDate: date as Date, instructionsLabel: instructionsLabel)
     }
     
     @IBAction func resetButton(_ sender: Any) {
-//        let convertedFrame = postBreathingView.globeView.convert(postBreathingView.globeView.frame, to: view)
-//        breathVisualizationView.frame = convertedFrame
-//        setupBaseViewState()
-        globeViewController.setAutoRotateInterval(0.01, degrees: 1)
+        setupBaseViewState()
     }
 }
 
@@ -119,15 +122,13 @@ extension ViewController: AnimatorOrchestratorDelegate {
     }
     
     func didEndBreathing() {
-        let convertedFrame = postBreathingView.globeView.convert(postBreathingView.globeView.frame, to: view)
-        UIView.animate(withDuration: 2.0, delay: 0.33, animations: {
+        let convertedFrame = postBreathingView.globeView.convert(postBreathingView.globeView.bounds, to: view)
+        UIView.animate(withDuration: 2.0, animations: {
             self.postBreathingView.alpha = 1
-            self.breathVisualizationView.transform = .identity
-            self.breathVisualizationView.frame = convertedFrame
         })
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.postBreathingView.showBreathLabel()
-        }
+        UIView.animate(withDuration: 2.0, delay: 0.33, options: .curveEaseInOut, animations: {
+            self.breathView.frame = convertedFrame
+        })
     }
 }
 

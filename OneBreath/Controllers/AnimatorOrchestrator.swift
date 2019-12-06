@@ -12,9 +12,10 @@ class AnimatorOrchestrator {
 
     private let minScale = 0.8
     private let maxScale = 1.1
-    private let numberOfBreathCycles = 1
+    private let numberOfBreathCycles = 6
     private let inBreathDuration = 4.0 //seconds
     private let outBreathDuration = 6.0 //seconds
+    private let silenceDuration = 20.0 //seconds
     
     private let breathAnimator: BreathAnimator
     private var breathView: UIView?
@@ -52,7 +53,7 @@ class AnimatorOrchestrator {
             UIView.animate(withDuration: 0.5, animations: {
                 instructionsLabel.alpha = 1
             })
-            let date = Date(timeInterval: 20, since: Date())
+            let date = Date(timeInterval: self.silenceDuration, since: Date())
             let timer = Timer(fire: date, interval: 0, repeats: false) { (_) in
                 UIView.animate(withDuration: 0.5, animations: {
                     instructionsLabel.alpha = 0

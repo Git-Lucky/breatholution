@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		509F07EB4BF23A42A21035E4 /* libPods-OneBreath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E50B63294E420107016F8AE2 /* libPods-OneBreath.a */; };
+		C85F34AA2399D8090099DCBF /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F34A92399D8090099DCBF /* Networker.swift */; };
 		C86ABB0D23809F1400D3DA01 /* satellite.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = C86ABB0C23809F1400D3DA01 /* satellite.mbtiles */; };
 		C8731A09236C8D9800693A52 /* PostBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8731A08236C8D9700693A52 /* PostBreathingView.swift */; };
 		C8731A0B236C8E1B00693A52 /* PostBreathingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8731A0A236C8E1B00693A52 /* PostBreathingView.xib */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		6765813D6D710DD5FDA9E276 /* Pods-OneBreath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBreath.release.xcconfig"; path = "Target Support Files/Pods-OneBreath/Pods-OneBreath.release.xcconfig"; sourceTree = "<group>"; };
 		BBB367DAA01C61931DE4FAEB /* Pods-OneBreath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBreath.debug.xcconfig"; path = "Target Support Files/Pods-OneBreath/Pods-OneBreath.debug.xcconfig"; sourceTree = "<group>"; };
+		C85F34A92399D8090099DCBF /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		C86ABB0C23809F1400D3DA01 /* satellite.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = satellite.mbtiles; sourceTree = "<group>"; };
 		C8731A08236C8D9700693A52 /* PostBreathingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBreathingView.swift; sourceTree = "<group>"; };
 		C8731A0A236C8E1B00693A52 /* PostBreathingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostBreathingView.xib; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				D0BA723D235FE4A40049913D /* IntroAnimator.swift */,
 				D0BA723A235D19800049913D /* DisplayLink.swift */,
 				D0F22A3523660AC5004FA68E /* HapticGenerator.swift */,
+				C85F34A92399D8090099DCBF /* Networker.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				D0BA721E235CDC300049913D /* SceneDelegate.swift in Sources */,
 				D0BA7232235CE54E0049913D /* BreathVisualizationView.swift in Sources */,
 				D0BA7240235FF3830049913D /* AnimatorOrchestrator.swift in Sources */,
+				C85F34AA2399D8090099DCBF /* Networker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
