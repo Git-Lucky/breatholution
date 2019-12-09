@@ -12,10 +12,11 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        Networker.fetchTimeToBreathe { (date) in
+            UserDefaults.standard.set(date, forKey: "breatheDate")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "breatheDateSet"), object: nil, userInfo: ["breatheDate":date])
+        }
         return true
     }
 

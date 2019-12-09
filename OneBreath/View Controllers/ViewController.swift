@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     var countdownLabel: CountdownLabel?
     
+    var breatheDate: Date?
     
     //remove after poc
     @IBOutlet weak var beginBreathingButton: UIButton!
@@ -43,6 +44,10 @@ class ViewController: UIViewController {
         self.instructionsLabel.alpha = 0
         self.countdownView.backgroundColor = .clear
         self.breathView.alpha = 0
+        
+        self.breatheDate = UserDefaults.standard.value(forKey: "breatheDate") as? Date
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateBreatheDate), name: NSNotification.Name(rawValue: "breatheDateSet"), object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -85,12 +90,22 @@ class ViewController: UIViewController {
             self.breathView.alpha = 1
         })
         
-        
-        // pull this date from a server in the future
-        let date = NSDate(timeIntervalSinceNow: 11111)
-        countdownLabel?.setCountDownDate(targetDate: date)
-        countdownLabel?.start()
-        animator?.beginBreathingSequence(breathView: breathView, onDate: date as Date, instructionsLabel: instructionsLabel)
+        refreshBreathCountdown()
+    }
+    
+    @objc func updateBreatheDate(_ notification: Notification) {
+        print("breath date set notification received")
+        breatheDate = notification.userInfo?["breatheDate"] as? Date
+        refreshBreathCountdown()
+    }
+    
+    func refreshBreathCountdown() {
+        if let date = self.breatheDate {
+            print("refreshing breath countdown")
+            countdownLabel?.setCountDownDate(targetDate: date as NSDate)
+            countdownLabel?.start()
+            animator?.beginBreathingSequence(breathView: breathView, onDate: date, instructionsLabel: instructionsLabel)
+        }
     }
     
     @IBAction func beginBreathingButton(_ sender: UIButton) {
