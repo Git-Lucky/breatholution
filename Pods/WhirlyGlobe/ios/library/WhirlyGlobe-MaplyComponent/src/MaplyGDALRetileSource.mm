@@ -114,7 +114,7 @@
         imgData = [NSData dataWithContentsOfFile:fileName];
         if (imgData)
         {
-                        NSLog(@"Tile was cached: %d: (%d,%d)",tileID.level,tileID.x,tileID.y);
+            //            NSLog(@"Tile was cached: %d: (%d,%d)",tileID.level,tileID.x,tileID.y);
             wasCached = true;
         }
     }
