@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		509F07EB4BF23A42A21035E4 /* libPods-OneBreath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E50B63294E420107016F8AE2 /* libPods-OneBreath.a */; };
+		C82C6CE6239DDFB800580339 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82C6CE5239DDFB800580339 /* ProgressView.xib */; };
+		C82C6CE8239DDFC500580339 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82C6CE7239DDFC500580339 /* ProgressView.swift */; };
 		C85F34AA2399D8090099DCBF /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F34A92399D8090099DCBF /* Networker.swift */; };
 		C86ABB0D23809F1400D3DA01 /* satellite.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = C86ABB0C23809F1400D3DA01 /* satellite.mbtiles */; };
 		C8731A09236C8D9800693A52 /* PostBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8731A08236C8D9700693A52 /* PostBreathingView.swift */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		6765813D6D710DD5FDA9E276 /* Pods-OneBreath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBreath.release.xcconfig"; path = "Target Support Files/Pods-OneBreath/Pods-OneBreath.release.xcconfig"; sourceTree = "<group>"; };
 		BBB367DAA01C61931DE4FAEB /* Pods-OneBreath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBreath.debug.xcconfig"; path = "Target Support Files/Pods-OneBreath/Pods-OneBreath.debug.xcconfig"; sourceTree = "<group>"; };
+		C82C6CE5239DDFB800580339 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
+		C82C6CE7239DDFC500580339 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		C85F34A92399D8090099DCBF /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		C86ABB0C23809F1400D3DA01 /* satellite.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = satellite.mbtiles; sourceTree = "<group>"; };
 		C8731A08236C8D9700693A52 /* PostBreathingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBreathingView.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 				C8731A0A236C8E1B00693A52 /* PostBreathingView.xib */,
 				D0BA7231235CE54E0049913D /* BreathVisualizationView.swift */,
 				D0BA7234235CE5990049913D /* BreathVisualizationView.xib */,
+				C82C6CE7239DDFC500580339 /* ProgressView.swift */,
+				C82C6CE5239DDFB800580339 /* ProgressView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BA7228235CDC310049913D /* LaunchScreen.storyboard in Resources */,
+				C82C6CE6239DDFB800580339 /* ProgressView.xib in Resources */,
 				C8731A0B236C8E1B00693A52 /* PostBreathingView.xib in Resources */,
 				D0BA7225235CDC310049913D /* Assets.xcassets in Resources */,
 				C86ABB0D23809F1400D3DA01 /* satellite.mbtiles in Resources */,
@@ -312,6 +319,7 @@
 				D05A9294236136E700EB0186 /* GlobeViewController.swift in Sources */,
 				D0BA721E235CDC300049913D /* SceneDelegate.swift in Sources */,
 				D0BA7232235CE54E0049913D /* BreathVisualizationView.swift in Sources */,
+				C82C6CE8239DDFC500580339 /* ProgressView.swift in Sources */,
 				D0BA7240235FF3830049913D /* AnimatorOrchestrator.swift in Sources */,
 				C85F34AA2399D8090099DCBF /* Networker.swift in Sources */,
 			);

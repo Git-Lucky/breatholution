@@ -13,7 +13,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        UserDefaults.standard.removeObject(forKey: "breatheDate")
         Networker.fetchTimeToBreathe { (date) in
             UserDefaults.standard.set(date, forKey: "breatheDate")
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "breatheDateSet"), object: nil, userInfo: ["breatheDate":date])

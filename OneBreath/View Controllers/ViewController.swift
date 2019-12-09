@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     var animator: AnimatorOrchestrator?
     private let globeViewController = GlobeViewController()
     private var breathView = UIView()
+    private var progressView = ProgressView()
     private var breathVisualizationViewInitialFrame: CGRect?
     
     var countdownLabel: CountdownLabel?
@@ -55,6 +56,9 @@ class ViewController: UIViewController {
         
         breathVisualizationViewInitialFrame = breathVisualizationBoundingView.frame
         breathView.frame = breathVisualizationBoundingView.frame
+        
+        breathView.addSubview(progressView)
+        progressView.frame = breathView.bounds
         
         breathView.addSubview(globeViewController.view)
         globeViewController.view.frame = breathView.bounds

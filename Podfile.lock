@@ -15,6 +15,7 @@ PODS:
   - libjson (7.6.1)
   - proj4 (4.8.0)
   - SMCalloutView (2.1.5)
+  - UICircularProgressRing (6.4.0)
   - WhirlyGlobe (2.6.5):
     - WhirlyGlobe/MaplyComponent (= 2.6.5)
   - WhirlyGlobe/glues (2.6.5)
@@ -32,6 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - CountdownLabel
+  - UICircularProgressRing
   - WhirlyGlobe (from `https://github.com/mousebird/WhirlyGlobe.git`, branch `develop`)
   - WhirlyGlobeResources
 
@@ -44,6 +46,7 @@ SPEC REPOS:
     - libjson
     - proj4
     - SMCalloutView
+    - UICircularProgressRing
     - WhirlyGlobeResources
 
 EXTERNAL SOURCES:
@@ -64,9 +67,10 @@ SPEC CHECKSUMS:
   libjson: 1a065ca64704a5d1b51c3754268998942d57ac6f
   proj4: 234525105d05a33b2ae9a90a6fe3935f7a246f7e
   SMCalloutView: 5c0ee363dc8e7204b2fda17dfad38c93e9e23481
+  UICircularProgressRing: 907613633e76e561b972a3868c95517d14c71006
   WhirlyGlobe: 4045ad4b71d6491cf2e287b5ac5904972d760139
   WhirlyGlobeResources: d7b3e929e828f958a8477ff6797f962fdb165472
 
-PODFILE CHECKSUM: 25619cc30a046edd9f20fb423d3f3cd9ca6763df
+PODFILE CHECKSUM: ad7790f39c5b91cc2a62d1c9ed7261afd7aeea23
 
 COCOAPODS: 1.8.4

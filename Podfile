@@ -5,4 +5,5 @@ target 'OneBreath' do
 	pod 'CountdownLabel'
 	pod 'WhirlyGlobe', :git => 'https://github.com/mousebird/WhirlyGlobe.git', :branch => 'develop'
 	pod 'WhirlyGlobeResources'
+	pod 'UICircularProgressRing'
 end
