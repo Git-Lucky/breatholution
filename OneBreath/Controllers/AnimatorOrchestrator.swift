@@ -2,6 +2,7 @@ import UIKit
 
 protocol AnimatorOrchestratorDelegate {
     func didBeginBreathingIntro()
+    func didBeginMainBreathingSequence(duration: TimeInterval)
     func didBeginSilencePeriod()
     func didEndBreathing()
 }
@@ -15,7 +16,7 @@ class AnimatorOrchestrator {
     private let numberOfBreathCycles = 6
     private let inBreathDuration = 4.0 //seconds
     private let outBreathDuration = 6.0 //seconds
-    private let silenceDuration = 20.0 //seconds
+    private let silenceDuration = 5.0 //seconds
     
     private let breathAnimator: BreathAnimator
     private var breathView: UIView?
@@ -47,6 +48,7 @@ class AnimatorOrchestrator {
     
     func beginMainBreathingSequence() {
         guard let breathView = self.breathView, let instructionsLabel = self.instructionsLabel else { fatalError() }
+        self.delegate.didBeginMainBreathingSequence(duration: Double(numberOfBreathCycles) * (inBreathDuration+outBreathDuration))
         self.breathAnimator.makeBreathe(view: breathView) {
             // show silence animation
             instructionsLabel.text = "Be still and allow\nthe past minute to soak in\n\nFeel your intentions being fulfilled\nand share them with the universe"

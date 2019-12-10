@@ -11,8 +11,9 @@ class ViewController: UIViewController {
     var animator: AnimatorOrchestrator?
     private let globeViewController = GlobeViewController()
     private var breathView = UIView()
-    private var progressView = ProgressView()
     private var breathVisualizationViewInitialFrame: CGRect?
+    private var progressView = ProgressView()
+    private var faderView = UIImageView()
     
     var countdownLabel: CountdownLabel?
     
@@ -56,15 +57,25 @@ class ViewController: UIViewController {
         
         breathVisualizationViewInitialFrame = breathVisualizationBoundingView.frame
         breathView.frame = breathVisualizationBoundingView.frame
+        breathView.autoresizesSubviews = true
         
-        breathView.addSubview(progressView)
         progressView.frame = breathView.bounds
+        progressView.transform = CGAffineTransform(scaleX: 1.07, y: 1.07)
         
-        breathView.addSubview(globeViewController.view)
+        faderView = UIImageView(image: #imageLiteral(resourceName: "radialAlphaGradient"))
+        faderView.frame = progressView.bounds
+        faderView.transform = CGAffineTransform(scaleX: 1.005, y: 1.005)
+        
         globeViewController.view.frame = breathView.bounds
         addChild(globeViewController)
         globeViewController.didMove(toParent: self)
         
+        progressView.addSubview(faderView)
+        breathView.addSubview(progressView)
+        breathView.addSubview(globeViewController.view)
+        
+//        progressView.start(60)
+                
         setupBaseViewState()
     }
     
@@ -74,6 +85,8 @@ class ViewController: UIViewController {
         
         self.countdownView.alpha = 0
         self.countdownView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        
+        self.faderView.alpha = 1
         
         UIView.animate(withDuration: 2.0, animations: {
             self.breathView.transform = .identity
@@ -136,18 +149,25 @@ extension ViewController: AnimatorOrchestratorDelegate {
         })
     }
     
+    func didBeginMainBreathingSequence(duration: TimeInterval) {
+        progressView.start(duration)
+    }
+    
     func didBeginSilencePeriod() {
         globeViewController.setAutoRotateInterval(0, degrees: 1)
     }
     
     func didEndBreathing() {
-        let convertedFrame = postBreathingView.globeView.convert(postBreathingView.globeView.bounds, to: view)
-        UIView.animate(withDuration: 2.0, animations: {
-            self.postBreathingView.alpha = 1
-        })
-        UIView.animate(withDuration: 2.0, delay: 0.33, options: .curveEaseInOut, animations: {
-            self.breathView.frame = convertedFrame
-        })
+        self.progressView.endAnimation {
+            self.faderView.alpha = 0
+            let convertedFrame = self.postBreathingView.globeView.convert(self.postBreathingView.globeView.bounds, to: self.view)
+            UIView.animate(withDuration: 2.0, animations: {
+                self.postBreathingView.alpha = 1
+            })
+            UIView.animate(withDuration: 2.0, delay: 0.33, options: .curveEaseInOut, animations: {
+                self.breathView.frame = convertedFrame
+            })
+        }
     }
 }
 

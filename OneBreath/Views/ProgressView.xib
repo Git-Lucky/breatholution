@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgessView" customModule="OneBreath" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="O5u-eK-OwZ"/>
+                <outlet property="eraserTimerRing" destination="6dk-bB-5Q3" id="VZg-q9-9Sl"/>
                 <outlet property="timerRing" destination="kaO-II-M3k" id="vd8-Yk-gik"/>
             </connections>
         </placeholder>
@@ -22,12 +23,20 @@
                     <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-bB-5Q3" userLabel="Eraser Timer Ring" customClass="UICircularTimerRing" customModule="UICircularProgressRing">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="6dk-bB-5Q3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3sL-9P-Bsy"/>
                 <constraint firstItem="kaO-II-M3k" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="8Z9-ZW-cYe"/>
+                <constraint firstItem="6dk-bB-5Q3" firstAttribute="height" secondItem="kaO-II-M3k" secondAttribute="height" id="FWz-V7-KZy"/>
                 <constraint firstItem="kaO-II-M3k" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="Fox-PV-sqH"/>
                 <constraint firstItem="kaO-II-M3k" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HFE-I0-7sm"/>
+                <constraint firstItem="6dk-bB-5Q3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Kys-vv-GpO"/>
+                <constraint firstItem="6dk-bB-5Q3" firstAttribute="width" secondItem="kaO-II-M3k" secondAttribute="width" id="yym-Oi-gkR"/>
                 <constraint firstItem="kaO-II-M3k" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zx2-2c-68x"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
