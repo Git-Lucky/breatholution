@@ -2,7 +2,7 @@ import UIKit
 
 protocol AnimatorOrchestratorDelegate {
     func didBeginBreathingIntro()
-    func didBeginMainBreathingSequence(duration: TimeInterval)
+    func didBeginMainBreathingSequence(inBreathDuration: Double, outBreathDuration: Double, numberOfCycles: Int)
     func didBeginSilencePeriod()
     func didEndBreathing()
 }
@@ -11,7 +11,7 @@ class AnimatorOrchestrator {
     
     let delegate: AnimatorOrchestratorDelegate
 
-    private let minScale = 0.8
+    private let minScale = 0.7
     private let maxScale = 1.1
     private let numberOfBreathCycles = 6
     private let inBreathDuration = 4.0 //seconds
@@ -38,17 +38,14 @@ class AnimatorOrchestrator {
         timerForBreathing = Timer(fire: onDate, interval: 0, repeats: false) { (timer) in
             
             self.delegate.didBeginBreathingIntro()
-            
-            IntroAnimator.animateIntro(view: breathView, duration: 2, scale: CGFloat(self.minScale)) {
-                self.animateInstructions()
-            }
+            IntroAnimator.animateIntro(view: breathView, duration: 2, scale: CGFloat(self.minScale))
         }
         RunLoop.main.add(timerForBreathing!, forMode: .common)
     }
     
     func beginMainBreathingSequence() {
         guard let breathView = self.breathView, let instructionsLabel = self.instructionsLabel else { fatalError() }
-        self.delegate.didBeginMainBreathingSequence(duration: Double(numberOfBreathCycles) * (inBreathDuration+outBreathDuration))
+        self.delegate.didBeginMainBreathingSequence(inBreathDuration: inBreathDuration, outBreathDuration: outBreathDuration, numberOfCycles: numberOfBreathCycles)
         self.breathAnimator.makeBreathe(view: breathView) {
             // show silence animation
             instructionsLabel.text = "Be still and allow\nthe past minute to soak in\n\nFeel your intentions being fulfilled\nand share them with the universe"
@@ -66,15 +63,17 @@ class AnimatorOrchestrator {
         }
     }
     
+    // NOTE: I should create an array of messages I want played on every in and out breath in sequence and then when the trough or crest is reached, it looks to see what/if the next message is.
     func animateInstructions() {
-        guard let instructionsLabel = self.instructionsLabel else { fatalError() }
-        instructionsLabel.text = "Be still and bring your\nattention to your breath"
-        UIView.animate(withDuration: 0.5) {
-            instructionsLabel.alpha = 1
-        }
-        let date = Date(timeInterval: 5, since: Date())
+        guard let instructionsLabel = self.instructionsLabel else { return }
+//        instructionsLabel.text = "Be still and bring your\nattention to your breath"
+//        UIView.animate(withDuration: 0.5) {
+//            instructionsLabel.alpha = 1
+//        }
+        let date = Date(timeInterval: 3, since: Date())
         let timer = Timer(fire: date, interval: 0, repeats: false) { (_) in
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 2, animations: {
+                self.breathView?.transform = CGAffineTransform(scaleX: CGFloat(self.minScale), y: CGFloat(self.minScale))
                 instructionsLabel.alpha = 0
             }) { (_) in
                 instructionsLabel.text = "Now inhale..."

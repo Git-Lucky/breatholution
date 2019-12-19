@@ -14,6 +14,10 @@
 		C86ABB0D23809F1400D3DA01 /* satellite.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = C86ABB0C23809F1400D3DA01 /* satellite.mbtiles */; };
 		C8731A09236C8D9800693A52 /* PostBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8731A08236C8D9700693A52 /* PostBreathingView.swift */; };
 		C8731A0B236C8E1B00693A52 /* PostBreathingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8731A0A236C8E1B00693A52 /* PostBreathingView.xib */; };
+		C8B5918523A6F56400BF0DA0 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B5918423A6F56400BF0DA0 /* AudioManager.swift */; };
+		C8B5918923A6FAE400BF0DA0 /* welcome.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C8B5918823A6FAE400BF0DA0 /* welcome.m4a */; };
+		C8B5918C23A6FAF700BF0DA0 /* setIntention.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C8B5918B23A6FAF700BF0DA0 /* setIntention.m4a */; };
+		C8B5918E23A6FAFF00BF0DA0 /* still.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C8B5918D23A6FAFF00BF0DA0 /* still.m4a */; };
 		C8DF3EEC23763BC200F8AFFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8DF3EEB23763BC100F8AFFA /* GoogleService-Info.plist */; };
 		D05A9294236136E700EB0186 /* GlobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05A9293236136E700EB0186 /* GlobeViewController.swift */; };
 		D0BA721C235CDC300049913D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BA721B235CDC300049913D /* AppDelegate.swift */; };
@@ -54,10 +58,14 @@
 		C86ABB0C23809F1400D3DA01 /* satellite.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = satellite.mbtiles; sourceTree = "<group>"; };
 		C8731A08236C8D9700693A52 /* PostBreathingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBreathingView.swift; sourceTree = "<group>"; };
 		C8731A0A236C8E1B00693A52 /* PostBreathingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostBreathingView.xib; sourceTree = "<group>"; };
+		C8B5918423A6F56400BF0DA0 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		C8B5918823A6FAE400BF0DA0 /* welcome.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = welcome.m4a; sourceTree = "<group>"; };
+		C8B5918B23A6FAF700BF0DA0 /* setIntention.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = setIntention.m4a; sourceTree = "<group>"; };
+		C8B5918D23A6FAFF00BF0DA0 /* still.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = still.m4a; sourceTree = "<group>"; };
 		C8DF3EEB23763BC100F8AFFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D05A9293236136E700EB0186 /* GlobeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeViewController.swift; sourceTree = "<group>"; };
 		D05A92952361376800EB0186 /* OneBreath-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneBreath-Bridging-Header.h"; sourceTree = "<group>"; };
-		D0BA7218235CDC300049913D /* OneBreath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneBreath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0BA7218235CDC300049913D /* Breatholution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breatholution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BA721B235CDC300049913D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0BA721D235CDC300049913D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D0BA721F235CDC300049913D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +113,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C8B5918A23A6FAEA00BF0DA0 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C8B5918823A6FAE400BF0DA0 /* welcome.m4a */,
+				C8B5918B23A6FAF700BF0DA0 /* setIntention.m4a */,
+				C8B5918D23A6FAFF00BF0DA0 /* still.m4a */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		D05A92982361379E00EB0186 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +145,7 @@
 		D0BA7219235CDC300049913D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0BA7218235CDC300049913D /* OneBreath.app */,
+				D0BA7218235CDC300049913D /* Breatholution.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +165,7 @@
 				C8DF3EEB23763BC100F8AFFA /* GoogleService-Info.plist */,
 				D0BA7236235CF4B00049913D /* Extensions.swift */,
 				D05A92952361376800EB0186 /* OneBreath-Bridging-Header.h */,
+				C8B5918A23A6FAEA00BF0DA0 /* Sounds */,
 				C86ABB0C23809F1400D3DA01 /* satellite.mbtiles */,
 				D0F22A2F23614632004FA68E /* Resources */,
 			);
@@ -175,6 +194,7 @@
 				D0BA723A235D19800049913D /* DisplayLink.swift */,
 				D0F22A3523660AC5004FA68E /* HapticGenerator.swift */,
 				C85F34A92399D8090099DCBF /* Networker.swift */,
+				C8B5918423A6F56400BF0DA0 /* AudioManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,7 +226,7 @@
 			);
 			name = OneBreath;
 			productName = OneBreath;
-			productReference = D0BA7218235CDC300049913D /* OneBreath.app */;
+			productReference = D0BA7218235CDC300049913D /* Breatholution.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -248,13 +268,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B5918C23A6FAF700BF0DA0 /* setIntention.m4a in Resources */,
 				D0BA7228235CDC310049913D /* LaunchScreen.storyboard in Resources */,
 				C82C6CE6239DDFB800580339 /* ProgressView.xib in Resources */,
 				C8731A0B236C8E1B00693A52 /* PostBreathingView.xib in Resources */,
+				C8B5918923A6FAE400BF0DA0 /* welcome.m4a in Resources */,
 				D0BA7225235CDC310049913D /* Assets.xcassets in Resources */,
 				C86ABB0D23809F1400D3DA01 /* satellite.mbtiles in Resources */,
 				D0BA7223235CDC300049913D /* Main.storyboard in Resources */,
 				D0BA7235235CE5990049913D /* BreathVisualizationView.xib in Resources */,
+				C8B5918E23A6FAFF00BF0DA0 /* still.m4a in Resources */,
 				C8DF3EEC23763BC200F8AFFA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +334,7 @@
 				D0BA7237235CF4B00049913D /* Extensions.swift in Sources */,
 				D0BA723B235D19800049913D /* DisplayLink.swift in Sources */,
 				D0BA7220235CDC300049913D /* ViewController.swift in Sources */,
+				C8B5918523A6F56400BF0DA0 /* AudioManager.swift in Sources */,
 				C8731A09236C8D9800693A52 /* PostBreathingView.swift in Sources */,
 				D0F22A3623660AC5004FA68E /* HapticGenerator.swift in Sources */,
 				D0BA7239235D150D0049913D /* BreathAnimator.swift in Sources */,
@@ -467,7 +491,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = A57KTL95E8;
 				INFOPLIST_FILE = OneBreath/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -475,8 +501,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.one.OneBreath;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libbambuser/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.breatholution.the;
+				PRODUCT_NAME = Breatholution;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "OneBreath/OneBreath-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -490,7 +521,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = A57KTL95E8;
 				INFOPLIST_FILE = OneBreath/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -498,8 +531,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.one.OneBreath;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libbambuser/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.breatholution.the;
+				PRODUCT_NAME = Breatholution;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "OneBreath/OneBreath-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

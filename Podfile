@@ -6,4 +6,5 @@ target 'OneBreath' do
 	pod 'WhirlyGlobe', :git => 'https://github.com/mousebird/WhirlyGlobe.git', :branch => 'develop'
 	pod 'WhirlyGlobeResources'
 	pod 'UICircularProgressRing'
+	pod 'libbambuser-ios', '0.9.24'
 end

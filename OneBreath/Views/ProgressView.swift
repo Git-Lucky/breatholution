@@ -6,6 +6,7 @@ class ProgressView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var timerRing: UICircularTimerRing!
     @IBOutlet weak var eraserTimerRing: UICircularTimerRing!
+    @IBOutlet weak var faderView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,7 +28,7 @@ class ProgressView: UIView {
         
         self.timerRing.style = .ontop
         self.timerRing.outerRingColor = .clear
-        self.timerRing.outerRingWidth = 1
+        self.timerRing.outerRingWidth = 7
         self.timerRing.innerRingColor = .label
         self.timerRing.innerRingWidth = 7
         self.timerRing.startAngle = 92
@@ -38,6 +39,8 @@ class ProgressView: UIView {
         self.eraserTimerRing.innerRingColor = .systemBackground
         self.eraserTimerRing.innerRingWidth = self.timerRing.innerRingWidth
         self.eraserTimerRing.startAngle = self.timerRing.startAngle
+        
+        self.faderView.image = #imageLiteral(resourceName: "radialAlphaGradient")
         
         self.timerRing.alpha = 0
         self.eraserTimerRing.alpha = 0
@@ -61,7 +64,7 @@ class ProgressView: UIView {
     
     func endAnimation(_ completion: @escaping () -> Void) {
         self.eraserTimerRing.alpha = 1
-        self.eraserTimerRing.startTimer(to: 1) { (state) in
+        self.eraserTimerRing.startTimer(to: 0.5) { (state) in
             switch state {
             case .finished:
                 print("finished")

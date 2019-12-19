@@ -676,6 +676,10 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
   defined by the Mozilla Public License, v. 2.0.
 
 
+## libbambuser-ios
+
+Copyright 2019 Bambuser AB
+
 ## libjson
 
 This license is also available in Documentation.pdf

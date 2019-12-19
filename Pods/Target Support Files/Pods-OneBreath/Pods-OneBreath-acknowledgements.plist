@@ -737,6 +737,16 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2019 Bambuser AB</string>
+			<key>License</key>
+			<string>Commercial</string>
+			<key>Title</key>
+			<string>libbambuser-ios</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>This license is also available in Documentation.pdf
 
 Copyright 2010 Jonathan Wallace. All rights reserved.

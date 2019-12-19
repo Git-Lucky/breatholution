@@ -20,9 +20,10 @@ class GlobeViewController: WhirlyGlobeViewController {
 //        doubleTapZoomGesture = false
 //        twoFingerTapGesture = false
 //        doubleTapDragGesture = false
+        self.view.isUserInteractionEnabled = false
         roll = 5
         
-        setAutoRotateInterval(0.01, degrees: 4)
+        setAutoRotateInterval(0.01, degrees:4)
 
     }
     
@@ -34,8 +35,8 @@ class GlobeViewController: WhirlyGlobeViewController {
         let cacheDir = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
         let thisCacheDir = "\(cacheDir)/stamentiles/"
         let tileInfo = MaplyRemoteTileInfoNew(baseURL: "http://tile.stamen.com/watercolor/{z}/{x}/{y}.png",
-                                              minZoom: Int32(3),
-                                              maxZoom: Int32(5))
+                                              minZoom: Int32(4),
+                                              maxZoom: Int32(4))
         tileInfo.cacheDir = thisCacheDir
         
         // Parameters describing how we want a globe broken down
@@ -44,12 +45,13 @@ class GlobeViewController: WhirlyGlobeViewController {
         sampleParams.edgeMatching = true
         sampleParams.minZoom = tileInfo.minZoom()
         sampleParams.maxZoom = tileInfo.maxZoom()
-        sampleParams.singleLevel = true
+        sampleParams.singleLevel = false
         
         guard let imageLoader = MaplyQuadImageLoader(params: sampleParams, tileInfo: tileInfo, viewC: baseVC) else {
             return nil
         }
         imageLoader.imageFormat = .imageUShort565;
+        
 //        imageLoader.debugMode = true
         
         return imageLoader

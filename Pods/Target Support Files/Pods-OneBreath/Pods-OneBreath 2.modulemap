@@ -1,0 +1,6 @@
+module Pods_OneBreath {
+  umbrella header "Pods-OneBreath-umbrella.h"
+
+  export *
+  module * { export * }
+}

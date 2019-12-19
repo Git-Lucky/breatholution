@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="O5u-eK-OwZ"/>
                 <outlet property="eraserTimerRing" destination="6dk-bB-5Q3" id="VZg-q9-9Sl"/>
+                <outlet property="faderView" destination="5M6-Tk-nR6" id="03I-16-yJB"/>
                 <outlet property="timerRing" destination="kaO-II-M3k" id="vd8-Yk-gik"/>
             </connections>
         </placeholder>
@@ -21,9 +22,20 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-II-M3k" customClass="UICircularTimerRing" customModule="UICircularProgressRing">
                     <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5M6-Tk-nR6">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        </imageView>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5M6-Tk-nR6" firstAttribute="height" secondItem="kaO-II-M3k" secondAttribute="height" multiplier="1.01" id="AgL-8N-f8g"/>
+                        <constraint firstItem="5M6-Tk-nR6" firstAttribute="width" secondItem="kaO-II-M3k" secondAttribute="width" multiplier="1.01" id="SDQ-51-Ecq"/>
+                        <constraint firstItem="5M6-Tk-nR6" firstAttribute="centerY" secondItem="kaO-II-M3k" secondAttribute="centerY" id="rX1-ax-yEY"/>
+                        <constraint firstItem="5M6-Tk-nR6" firstAttribute="centerX" secondItem="kaO-II-M3k" secondAttribute="centerX" id="spc-JP-PZl"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-bB-5Q3" userLabel="Eraser Timer Ring" customClass="UICircularTimerRing" customModule="UICircularProgressRing">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-bB-5Q3" userLabel="Eraser Timer Ring" customClass="UICircularTimerRing" customModule="UICircularProgressRing">
                     <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>

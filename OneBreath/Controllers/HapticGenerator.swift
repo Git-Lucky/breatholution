@@ -25,7 +25,26 @@ class HapticGenerator {
         }
     }
     
-    func breathIn() {
+    func beginHapticBreathing(inBreathDuration: Double, outBreathDuration: Double, numCycles: Int) {
+        breatheIn()
+        let cycleDuration = inBreathDuration + outBreathDuration
+        let breatheInTimer = Timer.init(timeInterval: cycleDuration, repeats: true) { (timer) in
+            self.breatheIn()
+        }
+        let date = Date(timeInterval: inBreathDuration, since: Date())
+        let breatheOutTimer = Timer.init(fire: date, interval: cycleDuration, repeats: true) { (timer) in
+            self.breatheOut()
+        }
+        let finishedBreathingTimer = Timer.init(timeInterval: (cycleDuration * Double(numCycles)), repeats: false) { (_) in
+            breatheInTimer.invalidate()
+            breatheOutTimer.invalidate()
+        }
+        RunLoop.main.add(finishedBreathingTimer, forMode: .common)
+        RunLoop.main.add(breatheInTimer, forMode: .common)
+        RunLoop.main.add(breatheOutTimer, forMode: .common)
+    }
+    
+    private func breatheIn() {
         // create a dull, strong haptic
         let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0)
         let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1)
@@ -52,7 +71,7 @@ class HapticGenerator {
         }
     }
     
-    func breathOut() {
+    private func breatheOut() {
         do {
             // create one continuous buzz that fades out
             let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0)
