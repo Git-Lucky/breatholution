@@ -2,7 +2,6 @@ import Foundation
 
 class Networker {
     
-    // https://bt9wxxvr83.execute-api.us-east-1.amazonaws.com/default/dateToBreathe
     struct Time: Codable {
         let hour: Int
         let minute: Int
@@ -65,6 +64,62 @@ class Networker {
                     print("Type '\(type)' mismatch:", context.debugDescription)
                     print("codingPath:", context.codingPath)
                 } catch {
+                    print("error: ", error)
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
+    static func checkForLiveBroadcast(completion: @escaping (Broadcast?) -> Void) {
+        print("checking for live broadcast")
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.bambuser.com"
+        components.path = "/broadcasts"
+        
+        guard let url = components.url else {
+            preconditionFailure("Failed to construct URL")
+        }
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/vnd.bambuser.v1+json", forHTTPHeaderField: "Accept")
+        request.setValue("Bearer 7k2t3oug4cyxk83i0kqpeiihg", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            let decoder = JSONDecoder()
+            if let data = data {
+                do {
+                    let broadcasts = try decoder.decode(BroadcastResults.self, from: data)
+                    for broadcast in broadcasts.results {
+                        if broadcast.type == "live" {
+                            DispatchQueue.main.async {
+                                completion(broadcast)
+                            }
+                            return
+                        }
+                    }
+                    print("no live broadcast")
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
+                } catch let DecodingError.dataCorrupted(context) {
+                    print(context)
+                } catch let DecodingError.keyNotFound(key, context) {
+                    print("Key '\(key)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.valueNotFound(value, context) {
+                    print("Value '\(value)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.typeMismatch(type, context)  {
+                    print("Type '\(type)' mismatch:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch {
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
                     print("error: ", error)
                 }
             }

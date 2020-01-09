@@ -12,19 +12,12 @@ class GlobeViewController: WhirlyGlobeViewController {
         setUpWithGlobe(self)
         
         setPosition(MaplyCoordinate(x: 0, y: 0), height: 1)
-        
-//        panGesture = false
-//        pinchGesture = false
-//        zoomAroundPinch = false
-//        rotateGesture = false
-//        doubleTapZoomGesture = false
-//        twoFingerTapGesture = false
-//        doubleTapDragGesture = false
-        self.view.isUserInteractionEnabled = false
+        setAutoRotateInterval(0.00001, degrees:4)
         roll = 5
         
-        setAutoRotateInterval(0.01, degrees:4)
-
+        self.view.isUserInteractionEnabled = false
+                
+//        startLocationTracking(with: self, useHeading: false, useCourse: false, simulate: false)
     }
     
     var imageLoader : MaplyQuadImageLoader? = nil
@@ -74,6 +67,31 @@ class GlobeViewController: WhirlyGlobeViewController {
             setupSatalliteTiles(globeVC)
         } else {
             imageLoader = setupLoader(globeVC)
+        }
+    }
+    
+    func markLocation(_ location: CLLocation) {
+        let coordinates = MaplyCoordinateMakeWithDegrees(Float(location.coordinate.longitude), Float(location.coordinate.latitude))
+        let circle = MaplyShapeCircle()
+        circle.center = coordinates
+        circle.radius = 0.01
+        
+        addShapes([circle], desc: [kMaplyColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)])
+    }
+}
+
+extension GlobeViewController: MaplyLocationTrackerDelegate {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChange status: CLAuthorizationStatus) {
+        if let location = manager.location {
+            markLocation(location)
+//            let coordinate = MaplyCoordinate(x: Float(location.coordinate.longitude), y: Float(location.coordinate.latitude))
+//            animate(toPosition: coordinate, time: 4)
+//            setAutoRotateInterval(0.00001, degrees:4)
+            stopLocationTracking()
         }
     }
 }

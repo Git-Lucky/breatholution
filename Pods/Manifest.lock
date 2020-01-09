@@ -59,7 +59,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   WhirlyGlobe:
-    :commit: c4f883655dca7da12c12a722fc40c7ef423200cd
+    :commit: 501167682e0ce56e8364ac7f79aebb0c2b8fe62a
     :git: https://github.com/mousebird/WhirlyGlobe.git
 
 SPEC CHECKSUMS:

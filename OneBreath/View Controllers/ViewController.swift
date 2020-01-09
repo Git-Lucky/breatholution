@@ -9,6 +9,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var breathVisualizationBoundingView: BreathVisualizationView! //for layout purposes
     @IBOutlet weak var infoTextView: UITextView!
     @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var broadcastPlayer: BambuserPlayerView!
+    @IBOutlet weak var broadcastGlobePositionView: UIView!
     var animator: AnimatorOrchestrator?
     private let globeViewController = GlobeViewController()
     private var breathView = UIView()
@@ -52,8 +54,6 @@ class ViewController: UIViewController {
         self.breathView.alpha = 0
         
         self.breatheDate = UserDefaults.standard.value(forKey: "breatheDate") as? Date
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(updateBreatheDate), name: NSNotification.Name(rawValue: "breatheDateSet"), object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,12 +72,7 @@ class ViewController: UIViewController {
         
         breathView.addSubview(progressView)
         breathView.addSubview(globeViewController.view)
-                        
-        setupBaseViewState()
-    }
-    
-    private func setupBaseViewState() {
-        //TODO: wrap these up in a method
+        
         self.breathingInLabel.alpha = 0
         self.breathingInLabel.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         
@@ -85,35 +80,62 @@ class ViewController: UIViewController {
         self.countdownView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         
         self.infoTextView.alpha = 0
-        ////////////////////
+        var downShiftedFrame = self.infoTextView.frame
+        downShiftedFrame.origin.y += 40
+        self.infoTextView.frame = downShiftedFrame
         
-        UIView.animate(withDuration: 2.0, animations: {
-            self.breathView.transform = .identity
-            self.breathView.frame = self.breathVisualizationViewInitialFrame!
-            self.instructionsLabel.alpha = 0
-            self.postBreathingView.alpha = 0
-        })
+        self.setupBaseViewState()
         
-        if let breatheDate = breatheDate {
-            let breatheTimeString = dateFormatter.string(from: breatheDate)
-            breathingInLabel.text = "Breathe with the\nworld @ \(breatheTimeString)"
-            UIView.animate(withDuration: 0.5) {
-                self.breathingInLabel.transform = .identity
-                self.breathingInLabel.alpha = 1
-            }
-            UIView.animate(withDuration: 0.5, delay: 0.25, animations: {
-                self.countdownView.transform = .identity
-                self.countdownView.alpha = 1
-            })
+        Networker.checkForLiveBroadcast { (broadcast) in
+            guard let cast = broadcast else { return }
+            self.broadcastIsLive(cast)
         }
         
-        UIView.animate(withDuration: 1, delay: 0.75, animations: {
-            self.breathView.alpha = 1
-            self.infoTextView.alpha = 1
-            self.infoTextView.transform = .identity
+        NotificationCenter.default.addObserver(self, selector: #selector(updateBreatheDate(_:)), name: NSNotification.Name(rawValue: "breatheDateSet"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(broadcastStartedNotification(_:)), name: NSNotification.Name(rawValue: "broadcastStarted"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appBecameActive(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
+    }
+    
+    private func setupBaseViewState() {
+        // Hide irrelevant views
+        hidePostBreathingAndInstructionsViews()
+        showBreathView()
+        // Show the countdown
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.8) {
+            self.showCountdown()
+        }
+    }
+    
+    func setupLiveBroadcastState() {
+        hideCountdownLabels()
+        hidePostBreathingAndInstructionsViews()
+        showBreathView()
+        UIView.animate(withDuration: 2.0, delay: 0, options: .curveEaseInOut, animations: {
+            self.breathView.frame = self.broadcastGlobePositionView.frame
         })
-        
-        refreshBreathCountdown()
+    }
+    
+    func setupPostBreathingView() {
+        hideCountdownLabels()
+        let convertedFrame = self.postBreathingView.globeView.convert(self.postBreathingView.globeView.bounds, to: self.view)
+        UIView.animate(withDuration: 2.0, animations: {
+            self.postBreathingView.alpha = 1
+        })
+        UIView.animate(withDuration: 2.0, delay: 0.33, options: .curveEaseInOut, animations: {
+            self.breathView.frame = convertedFrame
+        })
+    }
+    
+    func showBreathView() {
+        // Move globe back to its original size and place
+        UIView.animate(withDuration: 2.0, delay: 0, options: .curveEaseInOut, animations: {
+            self.breathView.transform = .identity
+            self.breathView.frame = self.breathVisualizationViewInitialFrame!
+        })
+        // show the globe if it was hidden... a delay because it takes some time to load the first time
+        UIView.animate(withDuration: 1, delay: 0.75, options: [], animations: {
+            self.breathView.alpha = 1
+        })
     }
     
     @objc func updateBreatheDate(_ notification: Notification) {
@@ -123,7 +145,14 @@ class ViewController: UIViewController {
     
     func refreshBreathCountdown() {
         if let date = self.breatheDate {
-            // TODO: dry this out, its used above verbatim
+            countdownLabel?.setCountDownDate(targetDate: date as NSDate)
+            countdownLabel?.start()
+            animator?.beginBreathingSequence(breathView: breathView, onDate: date, instructionsLabel: instructionsLabel)
+        }
+    }
+    
+    func showCountdown() {
+        if let date = breatheDate {
             let breatheTimeString = dateFormatter.string(from: date)
             breathingInLabel.text = "Breathe with the world @ \(breatheTimeString)"
             UIView.animate(withDuration: 0.5) {
@@ -134,18 +163,59 @@ class ViewController: UIViewController {
                 self.countdownView.transform = .identity
                 self.countdownView.alpha = 1
             })
-            
-            countdownLabel?.setCountDownDate(targetDate: date as NSDate)
-            countdownLabel?.start()
-            animator?.beginBreathingSequence(breathView: breathView, onDate: date, instructionsLabel: instructionsLabel)
         }
     }
     
+    func hidePostBreathingAndInstructionsViews() {
+        UIView.animate(withDuration: 0.5, delay: 0, animations: {
+            self.instructionsLabel.alpha = 0
+            self.postBreathingView.alpha = 0
+        })
+    }
+    
+    func hideCountdownLabels() {
+            UIView.animate(withDuration: 0.5, delay: 0.25, animations: {
+                self.countdownView.alpha = 0
+                self.countdownView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            })
+            UIView.animate(withDuration: 0.5, delay: 0.5, animations: {
+                self.breathingInLabel.alpha = 0
+                self.breathingInLabel.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            })
+            
+    //        var downShiftedFrame = self.infoTextView.frame
+    //        downShiftedFrame.origin.y += 40
+    //        UIView.animate(withDuration: 0.5, delay: 0, animations: {
+    //            self.infoTextView.alpha = 0
+    //            self.infoTextView.frame = downShiftedFrame
+    //        })
+        }
+    
+    @objc func broadcastStartedNotification(_ notification: Notification) {
+        let broadcast = notification.userInfo?["broadcastDetails"] as! Broadcast
+        print("Broadcast details received")
+        print(broadcast)
+        broadcastIsLive(broadcast)
+    }
+    
+    @objc func appBecameActive(_ notification: Notification) {
+        Networker.checkForLiveBroadcast { (broadcast) in
+            guard let cast = broadcast else { return }
+            self.broadcastIsLive(cast)
+        }
+    }
+    
+    func broadcastIsLive(_ broadcast: Broadcast) {
+        setupLiveBroadcastState()
+        broadcastPlayer.broadcastIsLive(broadcast, delegate: self)
+    }
+    
+    func broadcastStopped() {
+        setupPostBreathingView()
+    }
+    
     @IBAction func beginBreathingButton(_ sender: UIButton) {
-        let date = NSDate(timeIntervalSinceNow: 4)
-        countdownLabel?.setCountDownDate(targetDate: date)
-        countdownLabel?.start()
-        animator?.beginBreathingSequence(breathView: breathView, onDate: date as Date, instructionsLabel: instructionsLabel)
+        setupLiveBroadcastState()
     }
     
     @IBAction func resetButton(_ sender: Any) {
@@ -153,23 +223,26 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: BambuserPlayerViewDelegate {
+    func didEndBroadcast() {
+        broadcastStopped()
+    }
+    
+    func didError() {
+        Networker.checkForLiveBroadcast { (broadcast) in
+            guard let cast = broadcast else {
+                self.setupBaseViewState()
+                return
+            }
+            self.broadcastIsLive(cast)
+        }
+     }
+}
+
 extension ViewController: AnimatorOrchestratorDelegate {
     func didBeginBreathingIntro() {
-        UIView.animate(withDuration: 0.5) {
-            self.countdownView.alpha = 0
-            self.countdownView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        }
-        UIView.animate(withDuration: 0.5, delay: 0.25, animations: {
-            self.breathingInLabel.alpha = 0
-            self.breathingInLabel.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        })
-        UIView.animate(withDuration: 0.5, delay: 0.25, animations: {
-            self.infoTextView.alpha = 0
-            self.infoTextView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        })
-        
+        hideCountdownLabels()
         instructionsLabel.text = "Welcome to the Breatholution!"
-//        audioManager?.beginWelcome()
     }
     
     func didBeginMainBreathingSequence(inBreathDuration: Double, outBreathDuration: Double, numberOfCycles: Int) {
@@ -183,13 +256,7 @@ extension ViewController: AnimatorOrchestratorDelegate {
     
     func didEndBreathing() {
         self.progressView.endAnimation {
-            let convertedFrame = self.postBreathingView.globeView.convert(self.postBreathingView.globeView.bounds, to: self.view)
-            UIView.animate(withDuration: 2.0, animations: {
-                self.postBreathingView.alpha = 1
-            })
-            UIView.animate(withDuration: 2.0, delay: 0.33, options: .curveEaseInOut, animations: {
-                self.breathView.frame = convertedFrame
-            })
+            self.setupPostBreathingView()
         }
     }
 }

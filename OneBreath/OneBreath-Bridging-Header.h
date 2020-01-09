@@ -3,3 +3,8 @@
 //
 
 #import <WhirlyGlobeComponent.h>
+
+#import "libbambuserplayer.h"
+
+#import <AWSCore/AWSCore.h>
+#import <AWSCognito/AWSCognito.h>
