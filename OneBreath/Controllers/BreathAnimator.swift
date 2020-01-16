@@ -7,7 +7,7 @@ class BreathAnimator {
     private var startTime = CACurrentMediaTime()
     private let fileManager = FileManager()
     
-    private let numberOfBreathCycles: Int
+    private var numberOfBreathCycles: Int
     private var breathSessionTime: Double {
         return (inBreathTime + outBreathTime) * Double(numberOfBreathCycles)
     }
@@ -35,15 +35,33 @@ class BreathAnimator {
         self.displayLink = DisplayLink()
     }
     
-    func makeBreathe(view: UIView, completion: @escaping () -> Void) {
+    func makeBreathe(view: UIView, completion: (() -> Void)?) {
         breathingView = view
         startTime = CACurrentMediaTime()
         displayLink.startUpdates(delegate: self)
         self.completion = completion
     }
     
-    private func calculateScaleMultiplierForTime(_ time: TimeInterval) -> CGFloat {
-        let loopTime = time.truncatingRemainder(dividingBy: totalTime)
+    func stopBreathing() {
+        animationComplete()
+    }
+    
+//    private func calculateScaleMultiplierForTime(_ time: TimeInterval) -> CGFloat {
+//        let loopTime = time.truncatingRemainder(dividingBy: totalTime)
+//        let breathingIn = 0...inBreathTime ~= loopTime
+//        if breathingIn {
+//            let percentComplete = easeInOut(loopTime / inBreathTime)
+//            let movement = percentComplete * scaleRange
+//            return CGFloat(movement + minScale)
+//        } else {
+//            let percentComplete = easeInOut((loopTime - inBreathTime) / outBreathTime)
+//            let movement = percentComplete * scaleRange
+//            return CGFloat(maxScale - movement)
+//        }
+//    }
+    
+    private func calculateScaleMultiplierForAbsoluteTime() -> CGFloat {
+        let loopTime = Date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: totalTime)
         let breathingIn = 0...inBreathTime ~= loopTime
         if breathingIn {
             let percentComplete = easeInOut(loopTime / inBreathTime)
@@ -61,8 +79,13 @@ class BreathAnimator {
         completion?()
     }
     
-    private func scaleBreathingViewForElaspsedTime(_ elapsedTime: TimeInterval) {
-        let updatedScale = calculateScaleMultiplierForTime(elapsedTime)
+//    private func scaleBreathingViewForElaspsedTime(_ elapsedTime: TimeInterval) {
+//        let updatedScale = calculateScaleMultiplierForTime(elapsedTime)
+//        breathingView?.transform = CGAffineTransform(scaleX: updatedScale, y: updatedScale)
+//    }
+    
+    private func scaleBreathingViewToAbsoluteTime() {
+        let updatedScale = calculateScaleMultiplierForAbsoluteTime()
         breathingView?.transform = CGAffineTransform(scaleX: updatedScale, y: updatedScale)
     }
     
@@ -73,15 +96,20 @@ class BreathAnimator {
             return (-2 * x * x) + (4 * x) - 1
         }
     }
+    
+    func rounded(_ value: Double, toNearest: Double) -> Double {
+        return round(value / toNearest) * toNearest
+    }
 }
 
 extension BreathAnimator: DisplayLinkDelegate {
     func displayLinkDidUpdate(_ displayLink: CADisplayLink) {
-        let elapsedTime = CACurrentMediaTime() - startTime
-        guard elapsedTime < breathSessionTime else {
-            animationComplete()
-            return
-        }
-        scaleBreathingViewForElaspsedTime(elapsedTime)
+        scaleBreathingViewToAbsoluteTime()
+//        let elapsedTime = CACurrentMediaTime() - startTime
+//        guard elapsedTime < breathSessionTime else {
+//            animationComplete()
+//            return
+//        }
+//        scaleBreathingViewForElaspsedTime(elapsedTime)
     }
 }

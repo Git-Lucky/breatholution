@@ -1,7 +1,9 @@
 import UIKit
 
 protocol BambuserPlayerViewDelegate {
-    func didEndBroadcast()
+    func playerDidBeginBuffering()
+    func playerDidPlay()
+    func playerDidStop()
     func didError()
 }
 
@@ -10,7 +12,6 @@ class BambuserPlayerView: UIView, BambuserPlayerDelegate {
     var currentBroadcastID: String?
     var delegate: BambuserPlayerViewDelegate?
     var bufferingOverlayView: UIView?
-    var spinnerView: UIActivityIndicatorView?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,16 +42,22 @@ class BambuserPlayerView: UIView, BambuserPlayerDelegate {
         player.applicationId = "YEZ8MWRhzDqo5SWQCteYmQ"
         player.backgroundColor = .clear
         player.frame = bounds
+        player.videoScaleMode = VideoScaleAspectFill
         
         player.playVideo(broadcast.url)
         
         bufferingOverlayView = UIView(frame: frame)
-        bufferingOverlayView?.backgroundColor = .label
+        bufferingOverlayView?.backgroundColor = .clear
         bufferingOverlayView?.alpha = 0
-        spinnerView = UIActivityIndicatorView(frame: bufferingOverlayView!.bounds)
-        bufferingOverlayView?.addSubview(spinnerView!)
         
         addSubview(bufferingOverlayView!)
+    }
+    
+    func broadcastStopped() {
+        currentBroadcastID = nil
+        bambuserPlayer?.stopVideo()
+        bambuserPlayer?.removeFromSuperview()
+        bufferingOverlayView?.removeFromSuperview()
     }
 
     func playbackStatusChanged(_ status: BambuserPlayerState) {
@@ -60,16 +67,18 @@ class BambuserPlayerView: UIView, BambuserPlayerDelegate {
             break
             
         case kBambuserPlayerStateBuffering:
+            delegate?.playerDidBeginBuffering()
             //TODO: Make a better buffering animation
-            bringSubviewToFront(bufferingOverlayView!)
-            spinnerView?.startAnimating()
-            bufferingOverlayView?.alpha = 0.8
+//            bringSubviewToFront(bufferingOverlayView!)
+//            spinnerView?.startAnimating()
+//            bufferingOverlayView?.alpha = 1
             print("Buffering")
             break
             
         case kBambuserPlayerStatePlaying:
-            bufferingOverlayView?.alpha = 0
-            spinnerView?.stopAnimating()
+//            bufferingOverlayView?.alpha = 0
+//            spinnerView?.stopAnimating()
+            delegate?.playerDidPlay()
             
             addSubview(bambuserPlayer!)
             print("Playing")
@@ -80,21 +89,18 @@ class BambuserPlayerView: UIView, BambuserPlayerDelegate {
             break
 
         case kBambuserPlayerStateStopped:
-            delegate?.didEndBroadcast()
-            currentBroadcastID = nil
-            bambuserPlayer?.stopVideo()
-            bambuserPlayer?.removeFromSuperview()
-            bufferingOverlayView?.removeFromSuperview()
+            broadcastStopped()
+            delegate?.playerDidStop()
             print("Stopped")
             break
 
         case kBambuserPlayerStateError:
             Networker.checkForLiveBroadcast { (broadcast) in
-                if (broadcast != nil){
-                    self.bambuserPlayer?.playVideo(broadcast?.url)
-                } else {
+                guard let cast = broadcast, let delegate = self.delegate else {
                     self.delegate?.didError()
+                    return
                 }
+                self.broadcastIsLive(cast, delegate: delegate)
             }
             print("Player state error")
             break

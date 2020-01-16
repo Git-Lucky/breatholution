@@ -83,12 +83,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        
         print(error.localizedDescription)
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         print(userInfo)
+        print("!!!!!!!!!!!!!!")
         if let aps = userInfo["aps"] as? NSDictionary {
             if let body = aps["body"] as? NSDictionary {
                 if let payload = body["payload"] as? NSDictionary {
@@ -141,11 +141,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         print("*********")
         print("User Info = ",response.notification.request.content.userInfo["alert"] as! String)
         completionHandler()
-    }
-    
-    func stripTicks(_ string: String) -> String {
-        print(string)
-        return string.replacingOccurrences(of: "\\", with: "")
     }
     
     func decodeBroadcastWebhook(alertDictString: String) -> BroadcastWebhook? {

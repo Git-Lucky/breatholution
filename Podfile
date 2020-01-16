@@ -7,4 +7,5 @@ target 'OneBreath' do
 	pod 'WhirlyGlobeResources'
 	pod 'UICircularProgressRing'
 	pod 'libbambuser-ios', '0.9.24'
+	pod 'NVActivityIndicatorView'
 end

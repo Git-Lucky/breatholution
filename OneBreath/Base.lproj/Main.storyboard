@@ -18,16 +18,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWF-S2-2KP" customClass="BambuserPlayerView" customModule="Breatholution" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-kF-YX2">
-                                <rect key="frame" x="41.333333333333343" y="576" width="331.33333333333326" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="e4D-OY-UYb"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEU-8p-rRx" customClass="PostBreathingView" customModule="Breatholution" customModuleProvider="target">
                                 <rect key="frame" x="20.666666666666657" y="40" width="372.66666666666674" height="696"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,7 +35,7 @@
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="heyo"/>
                                 <connections>
-                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQL-8e-wqH"/>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmE-n8-bR3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1o-NV-4DM">
@@ -56,7 +46,7 @@
                                 </constraints>
                                 <state key="normal" image="grayEarth"/>
                                 <connections>
-                                    <action selector="beginBreathingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MkA-uD-6Td"/>
+                                    <action selector="beginBreathingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QlM-2N-xeA"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adg-6M-yZ7">
@@ -67,12 +57,6 @@
                                     <constraint firstAttribute="height" constant="45" id="vXm-hH-rI9"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be still and bring your attention to your breath" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB9-Yt-jgf">
-                                <rect key="frame" x="20.666666666666657" y="560.33333333333337" width="372.66666666666674" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe with the world @ 3pm" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCm-k3-0dJ">
                                 <rect key="frame" x="30" y="45.000000000000007" width="354" height="81.666666666666686"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
@@ -90,47 +74,39 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ZWF-S2-2KP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="2dP-zC-C7b"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gr1-kF-YX2" secondAttribute="bottom" id="5Gk-H9-vm8"/>
                             <constraint firstItem="YZ8-lf-BFN" firstAttribute="centerY" secondItem="s1o-NV-4DM" secondAttribute="centerY" id="8R2-Cb-Sff"/>
                             <constraint firstItem="w6u-1e-8nH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9qu-bb-aZc"/>
                             <constraint firstItem="w6u-1e-8nH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="EeH-00-6Xc"/>
                             <constraint firstItem="ZWF-S2-2KP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JgR-Vm-oLt"/>
                             <constraint firstItem="adg-6M-yZ7" firstAttribute="leading" secondItem="aCm-k3-0dJ" secondAttribute="leading" constant="2" id="KbV-7N-F1Q"/>
                             <constraint firstItem="dEU-8p-rRx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LNk-dc-Y4Q"/>
-                            <constraint firstItem="xB9-Yt-jgf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OPO-fL-ZgS"/>
                             <constraint firstItem="ZWF-S2-2KP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PtD-XU-QJO"/>
                             <constraint firstItem="ZWF-S2-2KP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RmE-4Z-In8"/>
                             <constraint firstItem="YZ8-lf-BFN" firstAttribute="height" secondItem="s1o-NV-4DM" secondAttribute="height" id="UGf-DS-JHq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aCm-k3-0dJ" secondAttribute="trailing" constant="30" id="VGE-80-cXJ"/>
                             <constraint firstItem="aCm-k3-0dJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="Veh-Ik-Pc2"/>
-                            <constraint firstItem="w6u-1e-8nH" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="cKX-81-LKP"/>
+                            <constraint firstItem="w6u-1e-8nH" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" priority="750" id="cKX-81-LKP"/>
                             <constraint firstItem="dEU-8p-rRx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ccD-Zv-dnd"/>
                             <constraint firstItem="YZ8-lf-BFN" firstAttribute="width" secondItem="s1o-NV-4DM" secondAttribute="width" id="fBr-cM-Pr8"/>
                             <constraint firstItem="aCm-k3-0dJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fid-bp-vNS"/>
-                            <constraint firstItem="xB9-Yt-jgf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="fo1-s0-uCP"/>
-                            <constraint firstItem="gr1-kF-YX2" firstAttribute="trailing" secondItem="w6u-1e-8nH" secondAttribute="trailing" id="gJt-9Z-ayh"/>
+                            <constraint firstItem="w6u-1e-8nH" firstAttribute="height" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.8" id="gp6-Hu-gWF"/>
                             <constraint firstItem="adg-6M-yZ7" firstAttribute="top" secondItem="aCm-k3-0dJ" secondAttribute="bottom" id="lcF-BM-r4W"/>
                             <constraint firstItem="dEU-8p-rRx" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="llx-zW-hDa"/>
-                            <constraint firstItem="gr1-kF-YX2" firstAttribute="leading" secondItem="w6u-1e-8nH" secondAttribute="leading" id="pMf-Li-7NL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s1o-NV-4DM" secondAttribute="trailing" constant="30" id="pbe-wZ-WfW"/>
                             <constraint firstItem="vZy-iY-iH3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="13" id="puQ-AT-fdc"/>
                             <constraint firstItem="YZ8-lf-BFN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qVA-Pg-Thg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s1o-NV-4DM" secondAttribute="bottom" constant="20" id="qjA-LO-2Xl"/>
                             <constraint firstItem="vZy-iY-iH3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="13" id="qxA-HB-bHo"/>
-                            <constraint firstItem="xB9-Yt-jgf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.55" id="tVz-hi-ZMy"/>
                             <constraint firstItem="dEU-8p-rRx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yXf-AQ-GTW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="beginBreathingButton" destination="s1o-NV-4DM" id="mJR-7k-tOg"/>
                         <outlet property="breathVisualizationBoundingView" destination="w6u-1e-8nH" id="hcV-nG-Py6"/>
                         <outlet property="breathingInLabel" destination="aCm-k3-0dJ" id="DEI-s5-u33"/>
                         <outlet property="broadcastGlobePositionView" destination="vZy-iY-iH3" id="eWw-ej-PVS"/>
                         <outlet property="broadcastPlayer" destination="ZWF-S2-2KP" id="8nC-I6-Xxd"/>
                         <outlet property="countdownView" destination="adg-6M-yZ7" id="4Rt-IU-cKt"/>
-                        <outlet property="infoTextView" destination="gr1-kF-YX2" id="1mb-oC-1kQ"/>
-                        <outlet property="instructionsLabel" destination="xB9-Yt-jgf" id="6vp-Hz-JTA"/>
                         <outlet property="postBreathingView" destination="dEU-8p-rRx" id="Zpi-xs-Sgd"/>
                     </connections>
                 </viewController>

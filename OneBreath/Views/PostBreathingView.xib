@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostBreathingView" customModule="OneBreath" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostBreathingView" customModule="Breatholution" customModuleProvider="target">
             <connections>
                 <outlet property="bodyLabel" destination="qkc-5g-fhI" id="s1G-e3-Rp8"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="bl9-ve-sAm"/>
@@ -19,12 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="589" height="687"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow! That was awesome!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="qkc-5g-fhI">
-                    <rect key="frame" x="103" y="329.5" width="383" height="38.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1p-HW-r7l">
                     <rect key="frame" x="29.5" y="121" width="530" height="176.5"/>
                     <subviews>
@@ -48,7 +42,6 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="SaG-Br-mbc" firstAttribute="height" secondItem="m1p-HW-r7l" secondAttribute="height" multiplier="0.4" id="1N5-Ek-IdO"/>
                         <constraint firstItem="7ju-81-ZOY" firstAttribute="leading" secondItem="m1p-HW-r7l" secondAttribute="leading" constant="2" id="5cy-JP-8uF"/>
@@ -62,6 +55,12 @@
                         <constraint firstAttribute="trailing" secondItem="mJb-LH-rg4" secondAttribute="trailing" constant="6.5" id="uGa-m3-Lgd"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow! That was awesome!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="qkc-5g-fhI">
+                    <rect key="frame" x="103" y="329.5" width="383" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>

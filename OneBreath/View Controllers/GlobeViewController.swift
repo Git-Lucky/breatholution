@@ -12,7 +12,7 @@ class GlobeViewController: WhirlyGlobeViewController {
         setUpWithGlobe(self)
         
         setPosition(MaplyCoordinate(x: 0, y: 0), height: 1)
-        setAutoRotateInterval(0.00001, degrees:4)
+        rotateGracefully()
         roll = 5
         
         self.view.isUserInteractionEnabled = false
@@ -43,7 +43,7 @@ class GlobeViewController: WhirlyGlobeViewController {
         guard let imageLoader = MaplyQuadImageLoader(params: sampleParams, tileInfo: tileInfo, viewC: baseVC) else {
             return nil
         }
-        imageLoader.imageFormat = .imageUShort565;
+        imageLoader.imageFormat = .image4Layer8Bit;
         
 //        imageLoader.debugMode = true
         
@@ -68,6 +68,14 @@ class GlobeViewController: WhirlyGlobeViewController {
         } else {
             imageLoader = setupLoader(globeVC)
         }
+    }
+    
+    func spinGlobe() {
+//        setAutoRotateInterval(0.00001, degrees:30)
+    }
+    
+    func rotateGracefully() {
+        setAutoRotateInterval(0.00001, degrees:4)
     }
     
     func markLocation(_ location: CLLocation) {

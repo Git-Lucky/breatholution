@@ -73,7 +73,6 @@ class Networker {
     }
     
     static func checkForLiveBroadcast(completion: @escaping (Broadcast?) -> Void) {
-        print("checking for live broadcast")
         var components = URLComponents()
         components.scheme = "https"
         components.host = "api.bambuser.com"
@@ -101,21 +100,32 @@ class Networker {
                             return
                         }
                     }
-                    print("no live broadcast")
                     DispatchQueue.main.async {
                         completion(nil)
                     }
                 } catch let DecodingError.dataCorrupted(context) {
                     print(context)
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
                 } catch let DecodingError.keyNotFound(key, context) {
                     print("Key '\(key)' not found:", context.debugDescription)
                     print("codingPath:", context.codingPath)
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
                 } catch let DecodingError.valueNotFound(value, context) {
                     print("Value '\(value)' not found:", context.debugDescription)
                     print("codingPath:", context.codingPath)
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
                 } catch let DecodingError.typeMismatch(type, context)  {
                     print("Type '\(type)' mismatch:", context.debugDescription)
                     print("codingPath:", context.codingPath)
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
                 } catch {
                     DispatchQueue.main.async {
                         completion(nil)
