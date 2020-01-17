@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/private/WGInteractionLayer_private.h

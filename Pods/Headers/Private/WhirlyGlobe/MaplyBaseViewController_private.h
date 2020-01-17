@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/private/MaplyBaseViewController_private.h

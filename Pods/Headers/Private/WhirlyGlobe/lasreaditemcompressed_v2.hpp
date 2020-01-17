@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/laszip/src/lasreaditemcompressed_v2.hpp

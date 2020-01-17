@@ -1,86 +1,26 @@
 PODS:
   - CountdownLabel (4.0.1)
-  - eigen (3.2.10)
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
-  - KissXML (5.3.1):
-    - KissXML/All (= 5.3.1)
-  - KissXML/Additions (5.3.1):
-    - KissXML/Core
-  - KissXML/All (5.3.1):
-    - KissXML/Additions
-    - KissXML/Core
-  - KissXML/Core (5.3.1)
   - libbambuser-ios (0.9.24)
-  - libjson (7.6.1)
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
-  - proj4 (4.8.0)
-  - SMCalloutView (2.1.5)
-  - UICircularProgressRing (6.4.0)
-  - WhirlyGlobe (2.6.5):
-    - WhirlyGlobe/MaplyComponent (= 2.6.5)
-  - WhirlyGlobe/glues (2.6.5)
-  - WhirlyGlobe/locallibs (2.6.5)
-  - WhirlyGlobe/MaplyComponent (2.6.5):
-    - eigen
-    - FMDB
-    - KissXML
-    - libjson
-    - proj4
-    - SMCalloutView
-    - WhirlyGlobe/glues
-    - WhirlyGlobe/locallibs
-  - WhirlyGlobeResources (2.3)
 
 DEPENDENCIES:
   - CountdownLabel
   - libbambuser-ios (= 0.9.24)
   - NVActivityIndicatorView
-  - UICircularProgressRing
-  - WhirlyGlobe (from `https://github.com/mousebird/WhirlyGlobe.git`, branch `develop`)
-  - WhirlyGlobeResources
 
 SPEC REPOS:
   trunk:
     - CountdownLabel
-    - eigen
-    - FMDB
-    - KissXML
     - libbambuser-ios
-    - libjson
     - NVActivityIndicatorView
-    - proj4
-    - SMCalloutView
-    - UICircularProgressRing
-    - WhirlyGlobeResources
-
-EXTERNAL SOURCES:
-  WhirlyGlobe:
-    :branch: develop
-    :git: https://github.com/mousebird/WhirlyGlobe.git
-
-CHECKOUT OPTIONS:
-  WhirlyGlobe:
-    :commit: 501167682e0ce56e8364ac7f79aebb0c2b8fe62a
-    :git: https://github.com/mousebird/WhirlyGlobe.git
 
 SPEC CHECKSUMS:
   CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
-  eigen: e2d5ffb7be5a884d4608ebe35a97b6f65e13ed8b
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  KissXML: 5c8e0f2e8b9f071d3e1ae123dec3eb5da615c10c
   libbambuser-ios: b72869a4f04485befc3237aab425a5021d183788
-  libjson: 1a065ca64704a5d1b51c3754268998942d57ac6f
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
-  proj4: 234525105d05a33b2ae9a90a6fe3935f7a246f7e
-  SMCalloutView: 5c0ee363dc8e7204b2fda17dfad38c93e9e23481
-  UICircularProgressRing: 907613633e76e561b972a3868c95517d14c71006
-  WhirlyGlobe: 4045ad4b71d6491cf2e287b5ac5904972d760139
-  WhirlyGlobeResources: d7b3e929e828f958a8477ff6797f962fdb165472
 
-PODFILE CHECKSUM: 4d69d1c02b14b4dba44c9310fbc20984de598b25
+PODFILE CHECKSUM: a14f232bad972c08ed39e14d018f5f01f1dbf676
 
 COCOAPODS: 1.8.4

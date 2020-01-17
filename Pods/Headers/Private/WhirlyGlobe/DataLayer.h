@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/DataLayer.h

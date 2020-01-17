@@ -3,17 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		509F07EB4BF23A42A21035E4 /* libPods-OneBreath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E50B63294E420107016F8AE2 /* libPods-OneBreath.a */; };
-		C82C6CE6239DDFB800580339 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82C6CE5239DDFB800580339 /* ProgressView.xib */; };
-		C82C6CE8239DDFC500580339 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82C6CE7239DDFC500580339 /* ProgressView.swift */; };
+		C8166B6123D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8166B6023D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 */; };
 		C85F34AA2399D8090099DCBF /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F34A92399D8090099DCBF /* Networker.swift */; };
+		C86BCCF023D0F00100CDDD2F /* InfiniteBreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86BCCEF23D0F00100CDDD2F /* InfiniteBreathViewController.swift */; };
 		C8731A09236C8D9800693A52 /* PostBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8731A08236C8D9700693A52 /* PostBreathingView.swift */; };
 		C8731A0B236C8E1B00693A52 /* PostBreathingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8731A0A236C8E1B00693A52 /* PostBreathingView.xib */; };
 		C877C56023AC1F7F002EE9A7 /* BambuserPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C877C55F23AC1F7F002EE9A7 /* BambuserPlayerView.swift */; };
+		C87C317723D1002200A8457F /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C317623D1002200A8457F /* LogoView.swift */; };
+		C87C317923D1002E00A8457F /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87C317823D1002E00A8457F /* LogoView.xib */; };
+		C87C317B23D1007D00A8457F /* BreathingTimeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C317A23D1007D00A8457F /* BreathingTimeTextView.swift */; };
+		C87C317D23D106EC00A8457F /* BreathingTimeTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87C317C23D106EC00A8457F /* BreathingTimeTextView.xib */; };
+		C87C317F23D1074700A8457F /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C317E23D1074700A8457F /* CountdownView.swift */; };
+		C87C318123D1075100A8457F /* CountdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87C318023D1075100A8457F /* CountdownView.xib */; };
+		C8A2430C23D240A500DC0599 /* CocogoosePro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8A2430B23D240A500DC0599 /* CocogoosePro-Light.otf */; };
 		C8B5918523A6F56400BF0DA0 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B5918423A6F56400BF0DA0 /* AudioManager.swift */; };
 		C8B9801F23ADA4980024A48E /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B9801923AD9F6C0024A48E /* AWSCognito.framework */; };
 		C8B9802023ADA4980024A48E /* AWSCognito.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8B9801923AD9F6C0024A48E /* AWSCognito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -23,8 +30,8 @@
 		C8B9802523ADA49C0024A48E /* AWSSNS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8B9801D23AD9F830024A48E /* AWSSNS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8B9802823AEB55C0024A48E /* BroadcastDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9802723AEB55C0024A48E /* BroadcastDetails.swift */; };
 		C8DF3EEC23763BC200F8AFFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8DF3EEB23763BC100F8AFFA /* GoogleService-Info.plist */; };
-		C8E52C3923CBD983008CB0D2 /* satellite.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = C8E52C3823CBD983008CB0D2 /* satellite.mbtiles */; };
-		D05A9294236136E700EB0186 /* GlobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05A9293236136E700EB0186 /* GlobeViewController.swift */; };
+		C8E28B4B23D2479F00FA688F /* InfiniteBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E28B4A23D2479F00FA688F /* InfiniteBreathingView.swift */; };
+		C8E28B4D23D247AA00FA688F /* InfiniteBreathingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8E28B4C23D247AA00FA688F /* InfiniteBreathingView.xib */; };
 		D0BA721C235CDC300049913D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BA721B235CDC300049913D /* AppDelegate.swift */; };
 		D0BA721E235CDC300049913D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BA721D235CDC300049913D /* SceneDelegate.swift */; };
 		D0BA7220235CDC300049913D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BA721F235CDC300049913D /* ViewController.swift */; };
@@ -70,21 +77,28 @@
 /* Begin PBXFileReference section */
 		6765813D6D710DD5FDA9E276 /* Pods-OneBreath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBreath.release.xcconfig"; path = "Target Support Files/Pods-OneBreath/Pods-OneBreath.release.xcconfig"; sourceTree = "<group>"; };
 		BBB367DAA01C61931DE4FAEB /* Pods-OneBreath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBreath.debug.xcconfig"; path = "Target Support Files/Pods-OneBreath/Pods-OneBreath.debug.xcconfig"; sourceTree = "<group>"; };
-		C82C6CE5239DDFB800580339 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
-		C82C6CE7239DDFC500580339 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		C8166B6023D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InfinityBreathingBackgroundVideo.mp4; sourceTree = "<group>"; };
 		C85F34A92399D8090099DCBF /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		C86BCCEF23D0F00100CDDD2F /* InfiniteBreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteBreathViewController.swift; sourceTree = "<group>"; };
 		C8731A08236C8D9700693A52 /* PostBreathingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBreathingView.swift; sourceTree = "<group>"; };
 		C8731A0A236C8E1B00693A52 /* PostBreathingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostBreathingView.xib; sourceTree = "<group>"; };
 		C877C55F23AC1F7F002EE9A7 /* BambuserPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BambuserPlayerView.swift; sourceTree = "<group>"; };
 		C877C58523AC563A002EE9A7 /* Breatholution.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Breatholution.entitlements; sourceTree = "<group>"; };
+		C87C317623D1002200A8457F /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		C87C317823D1002E00A8457F /* LogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
+		C87C317A23D1007D00A8457F /* BreathingTimeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTimeTextView.swift; sourceTree = "<group>"; };
+		C87C317C23D106EC00A8457F /* BreathingTimeTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreathingTimeTextView.xib; sourceTree = "<group>"; };
+		C87C317E23D1074700A8457F /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		C87C318023D1075100A8457F /* CountdownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountdownView.xib; sourceTree = "<group>"; };
+		C8A2430B23D240A500DC0599 /* CocogoosePro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CocogoosePro-Light.otf"; sourceTree = "<group>"; };
 		C8B5918423A6F56400BF0DA0 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		C8B9801923AD9F6C0024A48E /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognito.framework; sourceTree = "<group>"; };
 		C8B9801B23AD9F780024A48E /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
 		C8B9801D23AD9F830024A48E /* AWSSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSNS.framework; sourceTree = "<group>"; };
 		C8B9802723AEB55C0024A48E /* BroadcastDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastDetails.swift; sourceTree = "<group>"; };
 		C8DF3EEB23763BC100F8AFFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C8E52C3823CBD983008CB0D2 /* satellite.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = satellite.mbtiles; sourceTree = "<group>"; };
-		D05A9293236136E700EB0186 /* GlobeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeViewController.swift; sourceTree = "<group>"; };
+		C8E28B4A23D2479F00FA688F /* InfiniteBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteBreathingView.swift; sourceTree = "<group>"; };
+		C8E28B4C23D247AA00FA688F /* InfiniteBreathingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteBreathingView.xib; sourceTree = "<group>"; };
 		D05A92952361376800EB0186 /* OneBreath-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneBreath-Bridging-Header.h"; sourceTree = "<group>"; };
 		D0BA7218235CDC300049913D /* Breatholution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breatholution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BA721B235CDC300049913D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				D0BA721F235CDC300049913D /* ViewController.swift */,
-				D05A9293236136E700EB0186 /* GlobeViewController.swift */,
+				C86BCCEF23D0F00100CDDD2F /* InfiniteBreathViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -178,8 +192,8 @@
 		D0BA721A235CDC300049913D /* OneBreath */ = {
 			isa = PBXGroup;
 			children = (
-				C8E52C3823CBD983008CB0D2 /* satellite.mbtiles */,
 				C877C58523AC563A002EE9A7 /* Breatholution.entitlements */,
+				C8A2430B23D240A500DC0599 /* CocogoosePro-Light.otf */,
 				D05A92982361379E00EB0186 /* View Controllers */,
 				D0BA7233235CE56E0049913D /* Views */,
 				D0BA723C235D39E80049913D /* Controllers */,
@@ -193,6 +207,7 @@
 				C8DF3EEB23763BC100F8AFFA /* GoogleService-Info.plist */,
 				D0BA7236235CF4B00049913D /* Extensions.swift */,
 				D05A92952361376800EB0186 /* OneBreath-Bridging-Header.h */,
+				C8166B6023D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 */,
 			);
 			path = OneBreath;
 			sourceTree = "<group>";
@@ -204,9 +219,15 @@
 				C8731A0A236C8E1B00693A52 /* PostBreathingView.xib */,
 				D0BA7231235CE54E0049913D /* BreathVisualizationView.swift */,
 				D0BA7234235CE5990049913D /* BreathVisualizationView.xib */,
-				C82C6CE7239DDFC500580339 /* ProgressView.swift */,
-				C82C6CE5239DDFB800580339 /* ProgressView.xib */,
 				C877C55F23AC1F7F002EE9A7 /* BambuserPlayerView.swift */,
+				C87C317623D1002200A8457F /* LogoView.swift */,
+				C87C317823D1002E00A8457F /* LogoView.xib */,
+				C87C317A23D1007D00A8457F /* BreathingTimeTextView.swift */,
+				C87C317C23D106EC00A8457F /* BreathingTimeTextView.xib */,
+				C87C317E23D1074700A8457F /* CountdownView.swift */,
+				C87C318023D1075100A8457F /* CountdownView.xib */,
+				C8E28B4A23D2479F00FA688F /* InfiniteBreathingView.swift */,
+				C8E28B4C23D247AA00FA688F /* InfiniteBreathingView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,7 +257,6 @@
 				D0BA7214235CDC300049913D /* Sources */,
 				D0BA7215235CDC300049913D /* Frameworks */,
 				D0BA7216235CDC300049913D /* Resources */,
-				524B658B2102E22934C0CC05 /* [CP] Copy Pods Resources */,
 				C8DF3EE22374ED6C00F8AFFA /* Embed Watch Content */,
 				C8B9802123ADA4980024A48E /* Embed Frameworks */,
 				C8C418C423C6C066000B6D51 /* ShellScript */,
@@ -246,8 +266,6 @@
 			dependencies = (
 			);
 			name = OneBreath;
-			packageProductDependencies = (
-			);
 			productName = OneBreath;
 			productReference = D0BA7218235CDC300049913D /* Breatholution.app */;
 			productType = "com.apple.product-type.application";
@@ -291,13 +309,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8A2430C23D240A500DC0599 /* CocogoosePro-Light.otf in Resources */,
 				D0BA7228235CDC310049913D /* LaunchScreen.storyboard in Resources */,
-				C82C6CE6239DDFB800580339 /* ProgressView.xib in Resources */,
+				C87C317923D1002E00A8457F /* LogoView.xib in Resources */,
+				C87C317D23D106EC00A8457F /* BreathingTimeTextView.xib in Resources */,
+				C8E28B4D23D247AA00FA688F /* InfiniteBreathingView.xib in Resources */,
+				C87C318123D1075100A8457F /* CountdownView.xib in Resources */,
 				C8731A0B236C8E1B00693A52 /* PostBreathingView.xib in Resources */,
 				D0BA7225235CDC310049913D /* Assets.xcassets in Resources */,
+				C8166B6123D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 in Resources */,
 				D0BA7223235CDC300049913D /* Main.storyboard in Resources */,
 				D0BA7235235CE5990049913D /* BreathVisualizationView.xib in Resources */,
-				C8E52C3923CBD983008CB0D2 /* satellite.mbtiles in Resources */,
 				C8DF3EEC23763BC200F8AFFA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,23 +327,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		524B658B2102E22934C0CC05 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OneBreath/Pods-OneBreath-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OneBreath/Pods-OneBreath-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneBreath/Pods-OneBreath-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C8C418C423C6C066000B6D51 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,18 +376,21 @@
 				D0BA7237235CF4B00049913D /* Extensions.swift in Sources */,
 				D0BA723B235D19800049913D /* DisplayLink.swift in Sources */,
 				D0BA7220235CDC300049913D /* ViewController.swift in Sources */,
+				C87C317F23D1074700A8457F /* CountdownView.swift in Sources */,
 				C8B5918523A6F56400BF0DA0 /* AudioManager.swift in Sources */,
 				C8731A09236C8D9800693A52 /* PostBreathingView.swift in Sources */,
 				D0F22A3623660AC5004FA68E /* HapticGenerator.swift in Sources */,
+				C8E28B4B23D2479F00FA688F /* InfiniteBreathingView.swift in Sources */,
 				D0BA7239235D150D0049913D /* BreathAnimator.swift in Sources */,
+				C87C317723D1002200A8457F /* LogoView.swift in Sources */,
 				C8B9802823AEB55C0024A48E /* BroadcastDetails.swift in Sources */,
+				C87C317B23D1007D00A8457F /* BreathingTimeTextView.swift in Sources */,
 				D0BA721C235CDC300049913D /* AppDelegate.swift in Sources */,
 				D0BA723E235FE4A40049913D /* IntroAnimator.swift in Sources */,
-				D05A9294236136E700EB0186 /* GlobeViewController.swift in Sources */,
 				D0BA721E235CDC300049913D /* SceneDelegate.swift in Sources */,
 				D0BA7232235CE54E0049913D /* BreathVisualizationView.swift in Sources */,
 				C877C56023AC1F7F002EE9A7 /* BambuserPlayerView.swift in Sources */,
-				C82C6CE8239DDFC500580339 /* ProgressView.swift in Sources */,
+				C86BCCF023D0F00100CDDD2F /* InfiniteBreathViewController.swift in Sources */,
 				D0BA7240235FF3830049913D /* AnimatorOrchestrator.swift in Sources */,
 				C85F34AA2399D8090099DCBF /* Networker.swift in Sources */,
 			);

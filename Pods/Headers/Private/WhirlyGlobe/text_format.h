@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/protobuf/src/google/protobuf/text_format.h

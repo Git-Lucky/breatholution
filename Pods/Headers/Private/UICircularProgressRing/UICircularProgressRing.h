@@ -1,1 +1,0 @@
-../../../UICircularProgressRing/src/UICircularProgressRing/UICircularProgressRing.h

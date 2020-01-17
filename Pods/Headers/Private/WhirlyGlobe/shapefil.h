@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/shapefile/shapefil.h

@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/glues/include/SDL/SDL_opengles.h

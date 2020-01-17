@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/laszip/src/laszip_common_v2.hpp

@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/protobuf/src/google/protobuf/duration.pb.h

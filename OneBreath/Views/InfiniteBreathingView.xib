@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfiniteBreathingView" customModule="Breatholution" customModuleProvider="target">
+            <connections>
+                <outlet property="breathingImageView" destination="HgK-Mi-Gia" id="6Vn-tr-XxN"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ajK-Z4-g3p"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_O" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-Mi-Gia">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="HgK-Mi-Gia" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="Sz2-0R-ctp"/>
+                <constraint firstItem="HgK-Mi-Gia" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cpv-yP-inu"/>
+                <constraint firstItem="HgK-Mi-Gia" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="mib-Po-WSN"/>
+                <constraint firstItem="HgK-Mi-Gia" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tON-M3-sWn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="149.27536231884059" y="-106.47321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_O" width="842" height="596"/>
+    </resources>
+</document>

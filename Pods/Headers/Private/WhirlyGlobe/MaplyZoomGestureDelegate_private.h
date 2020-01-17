@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/ios/library/WhirlyGlobeLib/include/MaplyZoomGestureDelegate_private.h

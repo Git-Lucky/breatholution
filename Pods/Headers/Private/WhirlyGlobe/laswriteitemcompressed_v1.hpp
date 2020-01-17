@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/laszip/src/laswriteitemcompressed_v1.hpp

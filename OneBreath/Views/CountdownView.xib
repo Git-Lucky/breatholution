@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountdownView" customModule="Breatholution" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="acp-11-62d"/>
+                <outlet property="countdownLabel" destination="5jE-2k-JEl" id="3Uq-fA-3lD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5jE-2k-JEl" customClass="CountdownLabel" customModule="CountdownLabel">
+                    <rect key="frame" x="0.0" y="0.0" width="401" height="82"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="5jE-2k-JEl" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="0qr-Jy-hrg"/>
+                <constraint firstItem="5jE-2k-JEl" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="Awr-Pf-ZNU"/>
+                <constraint firstItem="5jE-2k-JEl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="S2E-oc-CVl"/>
+                <constraint firstItem="5jE-2k-JEl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vxc-Ms-dsf"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="124" y="1"/>
+        </view>
+    </objects>
+</document>

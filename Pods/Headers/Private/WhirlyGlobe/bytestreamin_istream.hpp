@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/laszip/src/bytestreamin_istream.hpp

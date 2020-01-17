@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/protobuf/src/google/protobuf/io/gzip_stream.h

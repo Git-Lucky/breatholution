@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/clipper/cpp/clipper.hpp

@@ -1,1 +1,0 @@
-../../../WhirlyGlobe/common/local_libs/protobuf/src/google/protobuf/unknown_field_set.h
