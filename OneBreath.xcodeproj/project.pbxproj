@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		509F07EB4BF23A42A21035E4 /* libPods-OneBreath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E50B63294E420107016F8AE2 /* libPods-OneBreath.a */; };
-		C8166B6123D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8166B6023D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 */; };
+		C850D4B323E7A61A004EA0A0 /* InfinityBreathingBackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C850D4B223E7A61A004EA0A0 /* InfinityBreathingBackgroundVideo.mp4 */; };
 		C85F34AA2399D8090099DCBF /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F34A92399D8090099DCBF /* Networker.swift */; };
 		C86BCCF023D0F00100CDDD2F /* InfiniteBreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86BCCEF23D0F00100CDDD2F /* InfiniteBreathViewController.swift */; };
 		C8731A09236C8D9800693A52 /* PostBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8731A08236C8D9700693A52 /* PostBreathingView.swift */; };
@@ -29,12 +29,12 @@
 		C8B9802423ADA49C0024A48E /* AWSSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B9801D23AD9F830024A48E /* AWSSNS.framework */; };
 		C8B9802523ADA49C0024A48E /* AWSSNS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8B9801D23AD9F830024A48E /* AWSSNS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8B9802823AEB55C0024A48E /* BroadcastDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9802723AEB55C0024A48E /* BroadcastDetails.swift */; };
+		C8D3AF9023D5259F00D0A067 /* pocBreath.mov in Resources */ = {isa = PBXBuildFile; fileRef = C8D3AF8F23D5259F00D0A067 /* pocBreath.mov */; };
 		C8DF3EEC23763BC200F8AFFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8DF3EEB23763BC100F8AFFA /* GoogleService-Info.plist */; };
 		C8E28B4B23D2479F00FA688F /* InfiniteBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E28B4A23D2479F00FA688F /* InfiniteBreathingView.swift */; };
 		C8E28B4D23D247AA00FA688F /* InfiniteBreathingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8E28B4C23D247AA00FA688F /* InfiniteBreathingView.xib */; };
 		D0BA721C235CDC300049913D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BA721B235CDC300049913D /* AppDelegate.swift */; };
 		D0BA721E235CDC300049913D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BA721D235CDC300049913D /* SceneDelegate.swift */; };
-		D0BA7220235CDC300049913D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BA721F235CDC300049913D /* ViewController.swift */; };
 		D0BA7223235CDC300049913D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BA7221235CDC300049913D /* Main.storyboard */; };
 		D0BA7225235CDC310049913D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0BA7224235CDC310049913D /* Assets.xcassets */; };
 		D0BA7228235CDC310049913D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BA7226235CDC310049913D /* LaunchScreen.storyboard */; };
@@ -77,7 +77,7 @@
 /* Begin PBXFileReference section */
 		6765813D6D710DD5FDA9E276 /* Pods-OneBreath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBreath.release.xcconfig"; path = "Target Support Files/Pods-OneBreath/Pods-OneBreath.release.xcconfig"; sourceTree = "<group>"; };
 		BBB367DAA01C61931DE4FAEB /* Pods-OneBreath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBreath.debug.xcconfig"; path = "Target Support Files/Pods-OneBreath/Pods-OneBreath.debug.xcconfig"; sourceTree = "<group>"; };
-		C8166B6023D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InfinityBreathingBackgroundVideo.mp4; sourceTree = "<group>"; };
+		C850D4B223E7A61A004EA0A0 /* InfinityBreathingBackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InfinityBreathingBackgroundVideo.mp4; sourceTree = "<group>"; };
 		C85F34A92399D8090099DCBF /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		C86BCCEF23D0F00100CDDD2F /* InfiniteBreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteBreathViewController.swift; sourceTree = "<group>"; };
 		C8731A08236C8D9700693A52 /* PostBreathingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBreathingView.swift; sourceTree = "<group>"; };
@@ -96,6 +96,7 @@
 		C8B9801B23AD9F780024A48E /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
 		C8B9801D23AD9F830024A48E /* AWSSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSNS.framework; sourceTree = "<group>"; };
 		C8B9802723AEB55C0024A48E /* BroadcastDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastDetails.swift; sourceTree = "<group>"; };
+		C8D3AF8F23D5259F00D0A067 /* pocBreath.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = pocBreath.mov; sourceTree = "<group>"; };
 		C8DF3EEB23763BC100F8AFFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8E28B4A23D2479F00FA688F /* InfiniteBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteBreathingView.swift; sourceTree = "<group>"; };
 		C8E28B4C23D247AA00FA688F /* InfiniteBreathingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteBreathingView.xib; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		D0BA7218235CDC300049913D /* Breatholution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breatholution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BA721B235CDC300049913D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0BA721D235CDC300049913D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0BA721F235CDC300049913D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0BA7222235CDC300049913D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0BA7224235CDC310049913D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0BA7227235CDC310049913D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -165,7 +165,6 @@
 		D05A92982361379E00EB0186 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0BA721F235CDC300049913D /* ViewController.swift */,
 				C86BCCEF23D0F00100CDDD2F /* InfiniteBreathViewController.swift */,
 			);
 			path = "View Controllers";
@@ -192,6 +191,7 @@
 		D0BA721A235CDC300049913D /* OneBreath */ = {
 			isa = PBXGroup;
 			children = (
+				C8D3AF8F23D5259F00D0A067 /* pocBreath.mov */,
 				C877C58523AC563A002EE9A7 /* Breatholution.entitlements */,
 				C8A2430B23D240A500DC0599 /* CocogoosePro-Light.otf */,
 				D05A92982361379E00EB0186 /* View Controllers */,
@@ -206,8 +206,8 @@
 				D0BA7229235CDC310049913D /* Info.plist */,
 				C8DF3EEB23763BC100F8AFFA /* GoogleService-Info.plist */,
 				D0BA7236235CF4B00049913D /* Extensions.swift */,
+				C850D4B223E7A61A004EA0A0 /* InfinityBreathingBackgroundVideo.mp4 */,
 				D05A92952361376800EB0186 /* OneBreath-Bridging-Header.h */,
-				C8166B6023D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 */,
 			);
 			path = OneBreath;
 			sourceTree = "<group>";
@@ -314,10 +314,11 @@
 				C87C317923D1002E00A8457F /* LogoView.xib in Resources */,
 				C87C317D23D106EC00A8457F /* BreathingTimeTextView.xib in Resources */,
 				C8E28B4D23D247AA00FA688F /* InfiniteBreathingView.xib in Resources */,
+				C850D4B323E7A61A004EA0A0 /* InfinityBreathingBackgroundVideo.mp4 in Resources */,
+				C8D3AF9023D5259F00D0A067 /* pocBreath.mov in Resources */,
 				C87C318123D1075100A8457F /* CountdownView.xib in Resources */,
 				C8731A0B236C8E1B00693A52 /* PostBreathingView.xib in Resources */,
 				D0BA7225235CDC310049913D /* Assets.xcassets in Resources */,
-				C8166B6123D24B4B00DF0162 /* InfinityBreathingBackgroundVideo.mp4 in Resources */,
 				D0BA7223235CDC300049913D /* Main.storyboard in Resources */,
 				D0BA7235235CE5990049913D /* BreathVisualizationView.xib in Resources */,
 				C8DF3EEC23763BC200F8AFFA /* GoogleService-Info.plist in Resources */,
@@ -375,7 +376,6 @@
 			files = (
 				D0BA7237235CF4B00049913D /* Extensions.swift in Sources */,
 				D0BA723B235D19800049913D /* DisplayLink.swift in Sources */,
-				D0BA7220235CDC300049913D /* ViewController.swift in Sources */,
 				C87C317F23D1074700A8457F /* CountdownView.swift in Sources */,
 				C8B5918523A6F56400BF0DA0 /* AudioManager.swift in Sources */,
 				C8731A09236C8D9800693A52 /* PostBreathingView.swift in Sources */,
@@ -541,7 +541,7 @@
 				CODE_SIGN_ENTITLEMENTS = OneBreath/Breatholution.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = A57KTL95E8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -577,7 +577,7 @@
 				CODE_SIGN_ENTITLEMENTS = OneBreath/Breatholution.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = A57KTL95E8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

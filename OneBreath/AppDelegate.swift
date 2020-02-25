@@ -17,12 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         
         // Initialize the Amazon Cognito credentials provider
-        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
-           identityPoolId:"us-east-1:7e394d73-1acf-466a-b1d1-f8aa77e06af4")
-        let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
-        AWSServiceManager.default().defaultServiceConfiguration = configuration
+//        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+//           identityPoolId:"us-east-1:7e394d73-1acf-466a-b1d1-f8aa77e06af4")
+//        let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+//        AWSServiceManager.default().defaultServiceConfiguration = configuration
         
-        UIApplication.shared.registerForRemoteNotifications()
+//        UIApplication.shared.registerForRemoteNotifications()
 //        registerForPushNotifications(application: application)
         
         return true

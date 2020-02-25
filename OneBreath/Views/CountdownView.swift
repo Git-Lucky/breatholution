@@ -24,7 +24,7 @@ class CountdownView: UIView {
         
         self.backgroundColor = .clear
         
-        countdownLabel.font = UIFont(name: "CocogoosePro-Light", size: 28.0)
+        countdownLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 28.0, weight: .medium)
         countdownLabel.textColor = .systemBackground
         countdownLabel.textAlignment = .center
         countdownLabel.backgroundColor = .clear

@@ -34,38 +34,6 @@
             endingLineNumber = "123"
             landmarkName = "-startFetchWithSuccess:failure:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3C822405-8B48-4A30-8FAA-5D59A0C899DA - aed9c80ab7de04b7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__51-[MaplyAerisTileSet startFetchWithSuccess:failure:]_block_invoke_2"
-                  moduleName = "Breatholution"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timthyme/Documents/Developer/OneBreath/Pods/WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/src/MaplyAerisTiles.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "644">
-               </Location>
-               <Location
-                  uuid = "3C822405-8B48-4A30-8FAA-5D59A0C899DA - aed9c80ab7de04b7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__51-[MaplyAerisTileSet startFetchWithSuccess:failure:]_block_invoke_2"
-                  moduleName = "Breatholution"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timthyme/Documents/Developer/OneBreath/Pods/WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/src/MaplyAerisTiles.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "656">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -241,22 +209,6 @@
             startingLineNumber = "92"
             endingLineNumber = "92"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3832F414-8CCA-4857-80FE-34805019EC31"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneBreath/Views/LogoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "commonInit()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

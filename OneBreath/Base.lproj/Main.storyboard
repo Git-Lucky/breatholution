@@ -20,6 +20,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msB-1b-qzh" userLabel="Live Player View" customClass="BambuserPlayerView" customModule="Breatholution" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </view>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQW-w6-D0v" userLabel="Background View" customClass="UIImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </view>
@@ -31,14 +34,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-Nl-pPL" userLabel="Breathing @ text View" customClass="BreathingTimeTextView" customModule="Breatholution" customModuleProvider="target">
-                                <rect key="frame" x="20.5" y="618" width="373" height="32"/>
+                                <rect key="frame" x="20.5" y="611" width="373" height="32"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="ufs-fa-bgO"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jb0-Tc-pd4" userLabel="Countdown View" customClass="CountdownView" customModule="Breatholution" customModuleProvider="target">
-                                <rect key="frame" x="20.5" y="650" width="373" height="40"/>
+                                <rect key="frame" x="20.5" y="643" width="373" height="40"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1VC-Pj-Cyl"/>
@@ -54,52 +57,82 @@
                                 <state key="normal" title="INVITE A FRIEND">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="inviteAFriendTapped:" destination="gim-ub-UDB" eventType="touchUpInside" id="6gW-U0-4dR"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ko-bx-X4w" userLabel="Breathing View" customClass="InfiniteBreathingView" customModule="Breatholution" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="151.5" width="331" height="331"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ko-bx-X4w" userLabel="infinite position view">
+                                <rect key="frame" x="41.5" y="148" width="331" height="331"/>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.50980392159999999" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9ko-bx-X4w" secondAttribute="height" multiplier="1:1" id="V8N-c8-QKL"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLH-yW-7oN">
+                                <rect key="frame" x="13" y="13" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oLH-yW-7oN" secondAttribute="height" id="kTw-N6-1P1"/>
+                                    <constraint firstAttribute="width" constant="60" id="w7z-V6-rPK"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpC-GV-yp9">
+                                <rect key="frame" x="314" y="0.0" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="c5E-tu-dJR"/>
+                                    <constraint firstAttribute="width" secondItem="QpC-GV-yp9" secondAttribute="height" multiplier="1:1" id="sxh-ye-Y6S"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="demoLiveBreathingButtonTapped:" destination="gim-ub-UDB" eventType="touchUpInside" id="Rya-EA-YI6"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="gQW-w6-D0v" firstAttribute="centerX" secondItem="RoC-pF-90E" secondAttribute="centerX" id="45s-rW-ZKO"/>
-                            <constraint firstItem="9ko-bx-X4w" firstAttribute="height" relation="lessThanOrEqual" secondItem="YXT-na-h4s" secondAttribute="height" multiplier="0.7" id="6QQ-DI-4nv"/>
-                            <constraint firstItem="eKB-Nl-pPL" firstAttribute="centerX" secondItem="YXT-na-h4s" secondAttribute="centerX" id="8Bi-uS-scU"/>
+                            <constraint firstItem="QpC-GV-yp9" firstAttribute="top" secondItem="RoC-pF-90E" secondAttribute="top" id="2Zp-0w-3uZ"/>
+                            <constraint firstItem="gQW-w6-D0v" firstAttribute="centerX" secondItem="y0E-pe-s07" secondAttribute="centerX" id="45s-rW-ZKO"/>
+                            <constraint firstItem="msB-1b-qzh" firstAttribute="centerX" secondItem="RoC-pF-90E" secondAttribute="centerX" id="4pE-Iv-TpR"/>
+                            <constraint firstItem="9ko-bx-X4w" firstAttribute="height" relation="lessThanOrEqual" secondItem="RoC-pF-90E" secondAttribute="height" multiplier="0.7" id="6QQ-DI-4nv"/>
+                            <constraint firstAttribute="trailing" secondItem="QpC-GV-yp9" secondAttribute="trailing" id="6k2-2F-9l8"/>
+                            <constraint firstItem="eKB-Nl-pPL" firstAttribute="centerX" secondItem="y0E-pe-s07" secondAttribute="centerX" id="8Bi-uS-scU"/>
                             <constraint firstItem="5I2-NH-yse" firstAttribute="centerX" secondItem="jb0-Tc-pd4" secondAttribute="centerX" id="Dwl-oP-4Up"/>
-                            <constraint firstItem="eKB-Nl-pPL" firstAttribute="centerY" secondItem="YXT-na-h4s" secondAttribute="centerY" multiplier="1.4" id="Gyt-ow-IIx"/>
+                            <constraint firstItem="oLH-yW-7oN" firstAttribute="leading" secondItem="y0E-pe-s07" secondAttribute="leading" constant="13" id="GHO-4W-svl"/>
+                            <constraint firstItem="eKB-Nl-pPL" firstAttribute="centerY" secondItem="RoC-pF-90E" secondAttribute="centerY" multiplier="1.4" id="Gyt-ow-IIx"/>
                             <constraint firstItem="gQW-w6-D0v" firstAttribute="centerY" secondItem="RoC-pF-90E" secondAttribute="centerY" id="I45-uR-Vap"/>
                             <constraint firstItem="gQW-w6-D0v" firstAttribute="width" secondItem="RoC-pF-90E" secondAttribute="width" id="Irz-aM-76W"/>
-                            <constraint firstItem="5I2-NH-yse" firstAttribute="width" secondItem="YXT-na-h4s" secondAttribute="width" multiplier="0.8" id="K7L-NP-iw7"/>
-                            <constraint firstItem="9ko-bx-X4w" firstAttribute="width" secondItem="YXT-na-h4s" secondAttribute="width" multiplier="0.8" id="KAr-Gz-GJr"/>
-                            <constraint firstItem="ZVT-4J-AhN" firstAttribute="width" secondItem="YXT-na-h4s" secondAttribute="width" multiplier="0.9" id="Mx1-Hp-xG1"/>
-                            <constraint firstItem="9ko-bx-X4w" firstAttribute="centerY" secondItem="YXT-na-h4s" secondAttribute="centerY" multiplier="0.7" id="On5-Yt-F1s"/>
-                            <constraint firstItem="eKB-Nl-pPL" firstAttribute="width" secondItem="YXT-na-h4s" secondAttribute="width" multiplier="0.900966" id="RIN-I3-S4t"/>
+                            <constraint firstItem="5I2-NH-yse" firstAttribute="width" secondItem="RoC-pF-90E" secondAttribute="width" multiplier="0.8" id="K7L-NP-iw7"/>
+                            <constraint firstItem="9ko-bx-X4w" firstAttribute="width" secondItem="RoC-pF-90E" secondAttribute="width" multiplier="0.8" id="KAr-Gz-GJr"/>
+                            <constraint firstItem="ZVT-4J-AhN" firstAttribute="width" secondItem="RoC-pF-90E" secondAttribute="width" multiplier="0.9" id="Mx1-Hp-xG1"/>
+                            <constraint firstItem="9ko-bx-X4w" firstAttribute="centerY" secondItem="RoC-pF-90E" secondAttribute="centerY" multiplier="0.7" id="On5-Yt-F1s"/>
+                            <constraint firstItem="eKB-Nl-pPL" firstAttribute="width" secondItem="RoC-pF-90E" secondAttribute="width" multiplier="0.900966" id="RIN-I3-S4t"/>
+                            <constraint firstItem="oLH-yW-7oN" firstAttribute="top" secondItem="RoC-pF-90E" secondAttribute="top" constant="13" id="ZjN-Ax-jrf"/>
                             <constraint firstItem="gQW-w6-D0v" firstAttribute="height" secondItem="RoC-pF-90E" secondAttribute="height" id="adc-X8-J8h"/>
-                            <constraint firstItem="ZVT-4J-AhN" firstAttribute="centerX" secondItem="YXT-na-h4s" secondAttribute="centerX" id="dzL-7J-Prf"/>
+                            <constraint firstItem="ZVT-4J-AhN" firstAttribute="centerX" secondItem="y0E-pe-s07" secondAttribute="centerX" id="dzL-7J-Prf"/>
+                            <constraint firstItem="msB-1b-qzh" firstAttribute="width" secondItem="RoC-pF-90E" secondAttribute="width" id="gJx-fN-dNm"/>
+                            <constraint firstItem="msB-1b-qzh" firstAttribute="height" secondItem="RoC-pF-90E" secondAttribute="height" id="gfh-WZ-cAt"/>
                             <constraint firstItem="jb0-Tc-pd4" firstAttribute="width" secondItem="eKB-Nl-pPL" secondAttribute="width" id="jfW-7u-4fg"/>
-                            <constraint firstItem="YXT-na-h4s" firstAttribute="bottom" secondItem="5I2-NH-yse" secondAttribute="bottom" constant="30" id="s6n-d3-KoA"/>
-                            <constraint firstItem="9ko-bx-X4w" firstAttribute="centerX" secondItem="YXT-na-h4s" secondAttribute="centerX" id="xGX-Sr-WFn"/>
+                            <constraint firstItem="msB-1b-qzh" firstAttribute="centerY" secondItem="RoC-pF-90E" secondAttribute="centerY" id="mHS-80-nOg"/>
+                            <constraint firstItem="y0E-pe-s07" firstAttribute="bottom" secondItem="5I2-NH-yse" secondAttribute="bottom" constant="30" id="s6n-d3-KoA"/>
+                            <constraint firstItem="9ko-bx-X4w" firstAttribute="centerX" secondItem="y0E-pe-s07" secondAttribute="centerX" id="xGX-Sr-WFn"/>
                             <constraint firstItem="jb0-Tc-pd4" firstAttribute="centerX" secondItem="eKB-Nl-pPL" secondAttribute="centerX" id="zoW-Dn-fx3"/>
                             <constraint firstItem="jb0-Tc-pd4" firstAttribute="top" secondItem="eKB-Nl-pPL" secondAttribute="bottom" id="zud-6v-cOz"/>
-                            <constraint firstItem="ZVT-4J-AhN" firstAttribute="top" secondItem="YXT-na-h4s" secondAttribute="top" constant="10" id="zw8-i9-x2V"/>
+                            <constraint firstItem="ZVT-4J-AhN" firstAttribute="top" secondItem="y0E-pe-s07" secondAttribute="top" constant="10" id="zw8-i9-x2V"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="YXT-na-h4s"/>
+                        <viewLayoutGuide key="safeArea" id="y0E-pe-s07"/>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="gQW-w6-D0v" id="ouS-3d-L5K"/>
                         <outlet property="breathingTimeTextView" destination="eKB-Nl-pPL" id="1Br-da-09i"/>
-                        <outlet property="breathingView" destination="9ko-bx-X4w" id="bPZ-Ik-Ycw"/>
+                        <outlet property="breathingViewInfinitePosition" destination="9ko-bx-X4w" id="bPZ-Ik-Ycw"/>
+                        <outlet property="breathingViewLivePosition" destination="oLH-yW-7oN" id="xTJ-r5-i4W"/>
                         <outlet property="countdownView" destination="jb0-Tc-pd4" id="rFm-Pj-oGr"/>
                         <outlet property="inviteButton" destination="5I2-NH-yse" id="bdf-xm-lZZ"/>
+                        <outlet property="livePlayer" destination="msB-1b-qzh" id="IEQ-Fe-jnD"/>
                         <outlet property="logoView" destination="ZVT-4J-AhN" id="JHx-4u-rOe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYx-Fi-Met" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-809" y="139"/>
+            <point key="canvasLocation" x="-810.14492753623199" y="138.61607142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -117,7 +150,7 @@
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6u-1e-8nH" customClass="BreathVisualizationView" customModule="Breatholution" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="287.5" width="331" height="331"/>
+                                <rect key="frame" x="41.5" y="282.5" width="331" height="331"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="w6u-1e-8nH" secondAttribute="height" multiplier="1:1" id="paJ-Zx-Pru"/>
@@ -169,31 +202,31 @@
                         <constraints>
                             <constraint firstItem="ZWF-S2-2KP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="2dP-zC-C7b"/>
                             <constraint firstItem="YZ8-lf-BFN" firstAttribute="centerY" secondItem="s1o-NV-4DM" secondAttribute="centerY" id="8R2-Cb-Sff"/>
-                            <constraint firstItem="w6u-1e-8nH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9qu-bb-aZc"/>
-                            <constraint firstItem="w6u-1e-8nH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="EeH-00-6Xc"/>
+                            <constraint firstItem="w6u-1e-8nH" firstAttribute="centerX" secondItem="4Zv-SF-rRJ" secondAttribute="centerX" id="9qu-bb-aZc"/>
+                            <constraint firstItem="w6u-1e-8nH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EeH-00-6Xc"/>
                             <constraint firstItem="ZWF-S2-2KP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JgR-Vm-oLt"/>
                             <constraint firstItem="adg-6M-yZ7" firstAttribute="leading" secondItem="aCm-k3-0dJ" secondAttribute="leading" constant="2" id="KbV-7N-F1Q"/>
-                            <constraint firstItem="dEU-8p-rRx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LNk-dc-Y4Q"/>
+                            <constraint firstItem="dEU-8p-rRx" firstAttribute="bottom" secondItem="4Zv-SF-rRJ" secondAttribute="bottom" id="LNk-dc-Y4Q"/>
                             <constraint firstItem="ZWF-S2-2KP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PtD-XU-QJO"/>
-                            <constraint firstItem="ZWF-S2-2KP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RmE-4Z-In8"/>
+                            <constraint firstItem="ZWF-S2-2KP" firstAttribute="centerX" secondItem="4Zv-SF-rRJ" secondAttribute="centerX" id="RmE-4Z-In8"/>
                             <constraint firstItem="YZ8-lf-BFN" firstAttribute="height" secondItem="s1o-NV-4DM" secondAttribute="height" id="UGf-DS-JHq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aCm-k3-0dJ" secondAttribute="trailing" constant="30" id="VGE-80-cXJ"/>
-                            <constraint firstItem="aCm-k3-0dJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="Veh-Ik-Pc2"/>
-                            <constraint firstItem="w6u-1e-8nH" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" priority="750" id="cKX-81-LKP"/>
-                            <constraint firstItem="dEU-8p-rRx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ccD-Zv-dnd"/>
+                            <constraint firstItem="4Zv-SF-rRJ" firstAttribute="trailing" secondItem="aCm-k3-0dJ" secondAttribute="trailing" constant="30" id="VGE-80-cXJ"/>
+                            <constraint firstItem="aCm-k3-0dJ" firstAttribute="top" secondItem="4Zv-SF-rRJ" secondAttribute="top" constant="45" id="Veh-Ik-Pc2"/>
+                            <constraint firstItem="w6u-1e-8nH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" priority="750" id="cKX-81-LKP"/>
+                            <constraint firstItem="dEU-8p-rRx" firstAttribute="top" secondItem="4Zv-SF-rRJ" secondAttribute="top" constant="40" id="ccD-Zv-dnd"/>
                             <constraint firstItem="YZ8-lf-BFN" firstAttribute="width" secondItem="s1o-NV-4DM" secondAttribute="width" id="fBr-cM-Pr8"/>
-                            <constraint firstItem="aCm-k3-0dJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fid-bp-vNS"/>
-                            <constraint firstItem="w6u-1e-8nH" firstAttribute="height" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.8" id="gp6-Hu-gWF"/>
+                            <constraint firstItem="aCm-k3-0dJ" firstAttribute="leading" secondItem="4Zv-SF-rRJ" secondAttribute="leading" constant="30" id="fid-bp-vNS"/>
+                            <constraint firstItem="w6u-1e-8nH" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="gp6-Hu-gWF"/>
                             <constraint firstItem="adg-6M-yZ7" firstAttribute="top" secondItem="aCm-k3-0dJ" secondAttribute="bottom" id="lcF-BM-r4W"/>
-                            <constraint firstItem="dEU-8p-rRx" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="llx-zW-hDa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s1o-NV-4DM" secondAttribute="trailing" constant="30" id="pbe-wZ-WfW"/>
-                            <constraint firstItem="vZy-iY-iH3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="13" id="puQ-AT-fdc"/>
-                            <constraint firstItem="YZ8-lf-BFN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qVA-Pg-Thg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s1o-NV-4DM" secondAttribute="bottom" constant="20" id="qjA-LO-2Xl"/>
+                            <constraint firstItem="dEU-8p-rRx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="llx-zW-hDa"/>
+                            <constraint firstItem="4Zv-SF-rRJ" firstAttribute="trailing" secondItem="s1o-NV-4DM" secondAttribute="trailing" constant="30" id="pbe-wZ-WfW"/>
+                            <constraint firstItem="vZy-iY-iH3" firstAttribute="leading" secondItem="4Zv-SF-rRJ" secondAttribute="leading" constant="13" id="puQ-AT-fdc"/>
+                            <constraint firstItem="YZ8-lf-BFN" firstAttribute="leading" secondItem="4Zv-SF-rRJ" secondAttribute="leading" constant="30" id="qVA-Pg-Thg"/>
+                            <constraint firstItem="4Zv-SF-rRJ" firstAttribute="bottom" secondItem="s1o-NV-4DM" secondAttribute="bottom" constant="20" id="qjA-LO-2Xl"/>
                             <constraint firstItem="vZy-iY-iH3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="13" id="qxA-HB-bHo"/>
-                            <constraint firstItem="dEU-8p-rRx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yXf-AQ-GTW"/>
+                            <constraint firstItem="dEU-8p-rRx" firstAttribute="centerX" secondItem="4Zv-SF-rRJ" secondAttribute="centerX" id="yXf-AQ-GTW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="4Zv-SF-rRJ"/>
                     </view>
                     <connections>
                         <outlet property="breathVisualizationBoundingView" destination="w6u-1e-8nH" id="hcV-nG-Py6"/>
